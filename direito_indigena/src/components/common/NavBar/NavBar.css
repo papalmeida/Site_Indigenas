@@ -1,0 +1,18 @@
+.custom-navbar {
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.custom-navbar .nav-link {
+    color: #fff !important;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    min-width: 140px; /* ajuste conforme necessário */
+    text-align: center;
+    box-sizing: border-box;
+    font-weight: 600;
+}
+
+.custom-navbar .nav-link:hover {
+    color: #f1f4e1 !important; /* amarelo, por exemplo */
+}
+

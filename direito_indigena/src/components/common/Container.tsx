@@ -1,41 +1,28 @@
-import React from 'react';
-import { Box } from '@mui/material';
-import { Outlet } from 'react-router-dom';
-import NavBar from './NavBar';
+import { Box, Grid } from '@mui/material';
+import NavBar from './NavBar/NavBar';
+import Hero from './Hero/Hero';
+import IntroductionSection from '../Sections/introduction/IntroductionSection';
+import { t } from 'i18next';
 
-export const Container: React.FC = () => {
+const Container = () => {
     return (
-        <Box sx={{ display: "flex" }}>
-            <Box sx={{
-                height: "100vh",
-                position: "sticky",
-                '& nav ul.css-ewdv3l' : {
-                    height: "100vh",
-                    display: "grid",
-                    gridTemplateRows: "1fr 10fr 1fr",
-                }, 
-                '& nav ul.css-ewdv3l div li.ps-menuitem-root .ps-menu-button': {
-                    display: "flex",
-                    justifyContent: "center",
-                    alignContent: "center",
-                    alignItems:"center"
-                    
-                },
-                '& nav ul.css-ewdv3l li.ps-menuitem-root .ps-menu-button .ps-menu-icon': {
-                    paddingLeft: "10px"
-                }
-            }}>
-                
-            </Box>
+        <Box
+            sx={{
+                display: 'flex',
+                flexDirection: 'column',
+                justifyContent: 'center',
+                alignItems: 'center',
+                backgroundColor: '#f1f4e1',
+            }}
+        >
             <NavBar />
-            <Box sx={{
-                height: "100vh",
-                position: "sticky",
-                overflowX: "auto",
-                width: "100%"
-            }}>
-                <Outlet />
-            </Box>
+            <Hero />
+            <Grid container>
+                <IntroductionSection 
+                    title={t("components.sections.introduction.title")} 
+                    description={t("components.sections.introduction.description")}
+                />
+            </Grid>
         </Box>
     );
 };

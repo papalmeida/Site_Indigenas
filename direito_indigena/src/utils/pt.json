@@ -1,0 +1,92 @@
+{
+    "translation": {
+        "components": {
+            "sections": {
+                "introduction": {
+                    "title": "Introdução",
+                    "description": "Apesar das leis existentes, os povos indígenas enfrentam desafios constantes para preservar sua memória ancestral. Este projeto analisa a situação da Aldeia Geru Tucunã e o papel do Direito na proteção de sua identidade."
+                },
+                "metodologia": {
+                    "title": "Metodologia",
+                    "etapa": {
+                        "1": {
+                            "title": "Etapa 1: Pesquisas, Estudo e Elaboração Inicial do Paper",
+                            "description": "Esta fase é o pontapé inicial, combinando a imersão teórica com a primeira versão do trabalho"
+                        },
+                        "2": {
+                            "title": "Etapa 2: Visita Técnica e Atualização do Paper com Estudo de Campo",
+                            "description": "Nesta etapa, o projeto ganha vida com a experiência prática e a integração de dados reais"
+                        },
+                        "3": {
+                            "title": "Etapa 3: Finalização do Paper e Preparação do Site de Apresentação",
+                            "description": "Esta fase foca na consolidação do trabalho escrito e na preparação para sua divulgação"
+                        },
+                        "4": {
+                            "title": "Etapa 4: Apresentação, Avaliação e Iniciativa Pró-Demarcação",
+                            "description": "O clímax do projeto, onde o trabalho é compartilhado, avaliado e gera um impacto direto"
+                        }
+                    },
+                    "direito": {
+                        "art_231": {
+                            "title": "Constituição Federal de 1988 (Artigo 231):",
+                            "description": "É um marco fundamental, pois reconhece a organização social, os costumes, as línguas, as crenças e as tradiçõesdos povos indígenas."
+                        },
+                        "convercao_169" : {
+                            "title": "Convenção 169 da Organização Internacional do Trabalho (OIT):",
+                            "description": "Incorporada ao ordenamento jurídico brasileiro, reconhece os direitos dos povos indígenas e tribais, respeitando suas culturas e tradições, e reforça o princípio da consulta livre, prévia e informada"
+                        },
+                        "lei_6001": {
+                            "title": "Lei nº 6.001, de 19 de dezembro de 1973 (Estatuto do Índio)"
+                        },
+                        "funai": {
+                            "title": "Fundação Nacional dos Povos Indígenas (FUNAI):",
+                            "description": "responsável pela implementação e fiscalização dos direitos indígenas, e a criação do Ministério dos Povos Indígenas"
+                        }
+                    }
+                },
+                "aldeia": {
+                    "title": "Aldeia Geru Tucunã",
+                    "subtitle": "A história da aldeia",
+                    "times": {
+                        "primeiro" : {
+                            "title": "1951:",
+                            "description": "Fogo de 51 força o deslocamento dos Pataxó (BA)."
+                        },
+                        "segundo" : {
+                            "title": "Anos 70-80:",
+                            "description": "Instalação e luta pela regularização da Fazenda Guarani (MG)."
+                        },
+                        "terceiro" : {
+                            "title": "1988:",
+                            "description": "A Fazenda Guarani é regularizada."
+                        },
+                        "quarto" : {
+                            "title": "2002:",
+                            "description": "Um grande incêndio na terra indígena causa significativo impacto ambiental e na produção agrícola da aldeia."
+                        },
+                        "quinto" : {
+                            "title": "23 de dezembro de 2009:",
+                            "description": "Foi apresentada a proposta de conhecer um território localizado na área de unidade de conservação dentro do Parque Estadual Rio Corrente, no município de Açucena."
+                        },
+                        "sexto" : {
+                            "title": "Julho de 2010:",
+                            "description": " Famílias Pataxó ocupam a área do Parque Estadual do Rio Correntes, no município de Açucena (MG), e iniciam a construção da Aldeia Gerú Tucunã, cujo nome significa \"papagaio na folha de tucum\"."
+                        },
+                        "setimo" : {
+                            "title": "Janeiro de 2014:",
+                            "description": " Ameaças se concretizam em um ataque contra o indígena Edmar Braz da Conceição, gerando uma comoção no MPF"
+                        },
+                        "oitavo" : {
+                            "title": "Abril (Atualmente):",
+                            "description": "A aldeia celebra o festival Awê Heruê, que simboliza a força, unidade, alegria, espiritualidade e resistência do povo Pataxó, fortalecendo sua cultura e tradições no dia 19 de abril."
+                        }
+                    }
+                },
+                "abaixo_assinado": {
+                    "title": "Abaixo assinado",
+                    "description": "Ajude-nos a Fazer a Diferença: Apoie a Demarcação da Terra Indígena Geru Tucunã Pataxó!"
+                }
+            }
+        }
+    }
+}
