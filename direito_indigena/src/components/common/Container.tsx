@@ -1,8 +1,10 @@
 import { Box, Grid } from '@mui/material';
 import NavBar from './NavBar/NavBar';
-import Hero from './Hero/Hero';
+import Hero from '../Sections/mainHero/MainHero';
 import IntroductionSection from '../Sections/introduction/IntroductionSection';
-import { t } from 'i18next';
+import Footer from './Footer/Footer';
+import Aldeia from '../Sections/aldeia/Aldeia';
+import AldeiaHero from '../Sections/aldeiaHero/AldeiaHero';
 
 const Container = () => {
     return (
@@ -17,12 +19,10 @@ const Container = () => {
         >
             <NavBar />
             <Hero />
-            <Grid container>
-                <IntroductionSection 
-                    title={t("components.sections.introduction.title")} 
-                    description={t("components.sections.introduction.description")}
-                />
-            </Grid>
+            <IntroductionSection />
+            <Aldeia />
+            <AldeiaHero />
+            <Footer />
         </Box>
     );
 };
