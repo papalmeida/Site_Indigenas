@@ -1,5 +1,7 @@
 import { Box, Typography, Grid } from "@mui/material";
 import ImgIndia from "../../../assets/img_colaboradores/img_india.jpg"
+import Faixa1 from "../../../assets/img_colaboradores/img1_colaboradores.png";
+import Faixa2 from "../../../assets/img_colaboradores/img2_colaboradores.png";
 
 const colaboradores = [
   "Ana Clara Pires Soares Zuccoloto; Ana Beatriz Vieira Félix",
@@ -105,37 +107,32 @@ const Colaboradores = () => (
           <b>Unileste</b> - Centro Universitário Católico do Leste de Minas Gerais
         </Typography>
       </Grid>
-      {/* Faixa decorativa à direita */}
-      <Grid
-        item
-        xs={12}
-        md={2}
+      <Box
+        component="img"
+        src={Faixa1}
+        alt="faixa decorativa 1"
         sx={{
-          display: { xs: "none", md: "flex" },
-          alignItems: "flex-end",
-          justifyContent: "flex-end",
-          pr: 2,
-          pb: 2,
+          position: "absolute",
+          right: { xs: 10, md: 40 },
+          height:"100%",
+          bottom: 0,
+          zIndex: 3,
+          display: { xs: "none", md: "block" },
         }}
-      >
-        <Box
-          sx={{
-            width: 60,
-            height: 120,
-            background: "none",
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "flex-end",
-            justifyContent: "flex-end",
-          }}
-        >
-          {/* SVG decorativo */}
-          <svg width="60" height="120" viewBox="0 0 60 120" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M0 120C0 93.1371 21.8629 71.2742 48.7258 71.2742C75.5887 71.2742 97.4516 93.1371 97.4516 120" stroke="#fff" strokeWidth="7"/>
-            <path d="M0 60C0 33.1371 21.8629 11.2742 48.7258 11.2742C75.5887 11.2742 97.4516 33.1371 97.4516 60" stroke="#fff" strokeWidth="7"/>
-          </svg>
-        </Box>
-      </Grid>
+      />
+      <Box
+        component="img"
+        src={Faixa2}
+        alt="faixa decorativa 2"
+        sx={{
+          position: "absolute",
+          height:"60%",
+          right: { xs: 150, md: 210 },
+          bottom: 0,
+          zIndex: 3,
+          display: { xs: "none", md: "block" },
+        }}
+      />
     </Grid>
   </Grid>
 );

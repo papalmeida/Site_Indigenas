@@ -17,7 +17,7 @@ const Container = () => {
         flexDirection: "column",
         justifyContent: "center",
         alignItems: "center",
-        backgroundColor: "#f1f4e1",
+        backgroundColor: "#f0efef",
       }}
     >
       <NavBar />
