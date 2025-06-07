@@ -15,11 +15,24 @@ const NavBar = () => {
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto mx-auto nav-underline">
-            <Nav.Link className="mx-auto nav_link_custom" href="#introducao">Introdução</Nav.Link>
-            <Nav.Link className="mx-auto nav_link_custom" href="#metodologia">Metodologia</Nav.Link>
-            <Nav.Link className="mx-auto nav_link_custom" href="#aldeia">Aldeia Geru Tucunã Pataxó</Nav.Link>
-            <Nav.Link className="mx-auto nav_link_custom" href="#legislacao">Legislação e Direitos</Nav.Link>
-            <Nav.Link className="mx-auto nav_link_custom" href="#apoie">Apoie a Causa</Nav.Link>
+            <Nav.Link className="mx-auto nav_link_custom" href="#introducao">
+              Introdução
+            </Nav.Link>
+            <Nav.Link className="mx-auto nav_link_custom" href="#aldeia-hero">
+              Marco
+            </Nav.Link>
+            <Nav.Link className="mx-auto nav_link_custom" href="#historia">
+              História
+            </Nav.Link>
+            <Nav.Link className="mx-auto nav_link_custom" href="#visita">
+              Visita
+            </Nav.Link>
+            <Nav.Link className="mx-auto nav_link_custom" href="#apoie">
+              Apoie a Causa
+            </Nav.Link>
+            <Nav.Link className="mx-auto nav_link_custom" href="#colaboradores">
+              Colaboradores
+            </Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>

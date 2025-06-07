@@ -3,8 +3,11 @@ import NavBar from "./NavBar/NavBar";
 import Hero from "../Sections/mainHero/MainHero";
 import IntroductionSection from "../Sections/introduction/IntroductionSection";
 import Footer from "./Footer/Footer";
-import Aldeia from "../Sections/aldeia/Aldeia";
 import AldeiaHero from "../Sections/aldeiaHero/AldeiaHero";
+import Visita from "../Sections/visit/Visita";
+import Apoie from "../Sections/abaixoAssinado/Apoie";
+import Colaboradores from "../Sections/colaboradores/Colaboradores";
+import Historia from "../Sections/history/Historia";
 
 const Container = () => {
   return (
@@ -20,8 +23,11 @@ const Container = () => {
       <NavBar />
       <Hero />
       <IntroductionSection />
-      <Aldeia />
       <AldeiaHero />
+      <Historia />
+      <Visita />
+      <Apoie />
+      <Colaboradores />
       <Footer />
     </Box>
   );

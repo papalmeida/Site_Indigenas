@@ -1,4 +1,5 @@
 import { Box, Grid, Typography } from "@mui/material";
+import ImgIntroduction from "../../../assets/img_introducao/img_introduction.jpeg"
 
 const IntroductionSection = () => {
   return (
@@ -73,7 +74,7 @@ const IntroductionSection = () => {
       >
         <Box
           component="img"
-          src="../src/assets/hero_img/img4.jpg"
+          src={ImgIntroduction}
           alt="Aldeia Geru Tucunã"
           sx={{
             width: { xs: "90vw", sm: "70vw", md: "100%" },

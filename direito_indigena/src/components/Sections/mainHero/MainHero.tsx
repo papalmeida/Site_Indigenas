@@ -1,20 +1,18 @@
 import { Carousel } from "react-bootstrap";
 import "./MainHero.css";
 import { Box, Grid, Typography } from "@mui/material";
+import img1 from "../../../assets/img_hero/img1.jpg";
+import img2 from "../../../assets/img_hero/img2.jpg";
+import img3 from "../../../assets/img_hero/img3.jpg";
 
-const images = [
-  "/src/assets/hero_img/img1.jpg",
-  "/src/assets/hero_img/img2.jpg",
-  "/src/assets/hero_img/img3.jpg",
-  "/src/assets/hero_img/img4.jpg",
-];
+
+const images = [img1, img2, img3];
 
 const Hero = () => (
   <Grid
     container
     component="section"
     position="relative"
-    id="aldeia-hero"
     sx={{
       width: "100vw",
       height: "100vh",

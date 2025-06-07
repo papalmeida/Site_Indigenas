@@ -1,12 +1,12 @@
 import { Carousel } from "react-bootstrap";
 import { Box, Typography, Button, Grid } from "@mui/material";
+import ImgBrasilia from "../../../assets/img_marcos/img_brasilia.jpg";
+import ImgConvercao from "../../../assets/img_marcos/img_convercao.jpg";
+import ImgFunai from "../../../assets/img_marcos/img_funai.jpg";
+import ImgLivro from "../../../assets/img_marcos/img_livro.jpg";
 
-const images = [
-  "/src/assets/hero_img/img1.jpg",
-"/src/assets/hero_img/img2.jpg",
-  "/src/assets/hero_img/img3.jpg",
-  "/src/assets/hero_img/img4.jpg",
-];
+
+const images = [ImgBrasilia, ImgConvercao, ImgFunai, ImgLivro];
 
 const AldeiaHero = () => (
   <Grid
@@ -101,13 +101,10 @@ const AldeiaHero = () => (
             lineHeight: 1.1,
             mb: 2,
             textShadow: "0 2px 8px #0008",
+            maxWidth: "550px"
           }}
         >
-          Convenção 169
-          <br />
-          da OIT e os
-          <br />
-          Povos Indígenas
+          O Marco do Reconhecimento Indígena na Constituição de 1988
         </Typography>
         <Typography
           sx={{
