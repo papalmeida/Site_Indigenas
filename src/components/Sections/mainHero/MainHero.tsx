@@ -36,7 +36,7 @@ const Hero = () => (
     <Grid
       container
       flexDirection="column"
-      justifyContent="center"
+      justifyContent="space-between"
       position="absolute"
       sx={{
         top: 0,

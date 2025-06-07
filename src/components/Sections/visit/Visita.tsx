@@ -19,7 +19,7 @@ const Visita = () => {
         py: { xs: 4, md: 8 },
         px: { xs: 2, md: 6 },
         height: "100vh",
-        position: "relative", // importante para overlay absoluto
+        position: "relative",
         overflow: "hidden",
       }}
     >

@@ -8,16 +8,15 @@ const Apoie = () => {
       id="apoie"
       container
       flexDirection="column"
-      alignItems="center"
+      alignItems="end"
       justifyContent="center"
       position="relative"
+      paddingX={"20px"}
       sx={{
         height: "100vh",
         width: "100%",
         background: "#181b1a",
         backgroundImage: `url(${ImgFundo})`,
-        py: { xs: 6, md: 10 },
-        px: 2,
       }}
     >
       <Box
@@ -26,7 +25,7 @@ const Apoie = () => {
           inset: 0,
           width: "100%",
           height: "100%",
-          bgcolor: "rgba(24,27,26,0.7)", // ajuste o alpha para mais ou menos transparência
+          bgcolor: "rgba(24,27,26,0.7)", 
           zIndex: 1,
           pointerEvents: "none",
         }}
@@ -50,11 +49,12 @@ const Apoie = () => {
       />
       <Box
         sx={{
-          maxWidth: 800,
-          mx: "auto",
-          textAlign: "center",
+          maxWidth: 1000,
+          textAlign: {md: "center", lg: "right"},
           zIndex: 2,
           position: "relative",
+          paddingX:{xs: "20px", sm: "40px", md:"60px", lg:"90px"},
+          paddingY: "20px"
         }}
       >
         <Typography
@@ -76,7 +76,7 @@ const Apoie = () => {
             fontSize: { xs: "1em", sm: "1.1em", md: "1.2em" },
             color: "#f5f7e7",
             mb: 3,
-            textAlign: "center",
+            textAlign: {md: "center", lg: "right"},
           }}
         >
           Nós, estudantes de Direito, tivemos o privilégio de conhecer a fundo

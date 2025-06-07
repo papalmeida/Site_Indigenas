@@ -1,5 +1,6 @@
 import { Box, Button, Grid, Typography } from "@mui/material";
 import ImgIntroduction from "../../../assets/img_introducao/img_introduction.jpeg";
+import ImgFundo from "../../../assets/img_introducao/fundo_branco.png";
 
 const IntroductionSection = () => {
   return (
@@ -9,10 +10,26 @@ const IntroductionSection = () => {
       alignItems="center"
       justifyContent="center"
       sx={{
+        backgroundColor: "#fff",
         width: "100%",
-        backgroundColor: "#f0efef",
+        position: "relative",
+        overflow: "hidden",
       }}
     >
+      <Box
+        component="img"
+        src={ImgFundo}
+        alt=""
+        sx={{
+          position: "absolute",
+          inset: 0,
+          width: "100%",
+          height: "100%",
+          opacity: 0.25,
+          zIndex: 1,
+          pointerEvents: "none",
+        }}
+      />
       <Grid
         container
         alignItems="center"
@@ -25,6 +42,7 @@ const IntroductionSection = () => {
           textAlign: { xs: "center", md: "left" },
           boxSizing: "border-box",
           overflowX: "hidden",
+          zIndex: 2
         }}
       >
         <Grid
