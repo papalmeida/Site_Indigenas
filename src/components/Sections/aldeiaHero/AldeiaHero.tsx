@@ -1,11 +1,11 @@
 import { useState, type SetStateAction } from "react";
 import { Carousel } from "react-bootstrap";
-import { Box, Typography, Button, Grid, IconButton } from "@mui/material";
+import { Typography, Button, Grid, IconButton } from "@mui/material";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
-import ImgBrasilia from "../../../assets/img_marcos/img_brasilia.jpg";
-import ImgConvercao from "../../../assets/img_marcos/img_convercao.jpg";
-import ImgFunai from "../../../assets/img_marcos/img_funai.jpg";
-import ImgLivro from "../../../assets/img_marcos/img_livro.jpg";
+import ImgBrasilia from "../../../assets/img/img_marcos/img_brasilia.jpg";
+import ImgConvercao from "../../../assets/img/img_marcos/img_convercao.jpg";
+import ImgFunai from "../../../assets/img/img_marcos/img_funai.jpg";
+import ImgLivro from "../../../assets/img/img_marcos/img_livro.jpg";
 import { motion, AnimatePresence } from "framer-motion";
 
 // Slides com imagem + texto associado
@@ -104,8 +104,9 @@ const AldeiaHero = () => {
         >
           <Typography
             sx={{
+              fontFamily: "Montserrat",
               color: "#fff",
-              fontSize: { xs: "0.6em", sm: "0.8em", md: "1em" },
+              fontSize: { xs: "1em", sm: "1.1em", md: "1.2em" },
               letterSpacing: 1,
             }}
           >
@@ -113,8 +114,9 @@ const AldeiaHero = () => {
           </Typography>
           <Typography
             sx={{
+              fontFamily: "Montserrat",
               color: "#fff",
-              fontSize: { xs: "0.6em", sm: "0.8em", md: "1em" },
+              fontSize: { xs: "1em", sm: "1.1em", md: "1.2em" },
               letterSpacing: 1,
             }}
           >
@@ -143,8 +145,8 @@ const AldeiaHero = () => {
             >
               <Typography
                 sx={{
-                  fontSize: { xs: "2em", sm: "2.5em", md: "3.2em" },
-                  fontWeight: 600,
+                  fontFamily: "The-Seasons",
+                  fontSize: { xs: "2em", sm: "2.5em", md: "3.5em" },
                   color: "#fff",
                   textAlign: "left",
                   lineHeight: 1.1,
@@ -158,11 +160,13 @@ const AldeiaHero = () => {
 
               <Typography
                 sx={{
-                  fontSize: { xs: "1em", sm: "1.1em", md: "1.2em" },
+                  fontFamily: "Montserrat",
+                  fontSize: { xs: "1em", sm: "1.1em", md: "1.4em" },
                   color: "#fff",
                   textAlign: "left",
                   lineHeight: 1.5,
                   mb: 4,
+                  letterSpacing: 2,
                   textShadow: "0 2px 8px #0008",
                   maxWidth: 600,
                 }}
@@ -191,11 +195,12 @@ const AldeiaHero = () => {
             sx={{
               color: "#fff",
               borderColor: "#fff",
-              borderRadius: "20px",
+              borderRadius: "40px",
               px: 4,
               py: 1,
               fontWeight: 500,
-              letterSpacing: 1,
+              letterSpacing: 3,
+              fontFamily: "Montserrat",
               fontSize: { xs: "0.9em", sm: "1em" },
               background: "rgba(255, 255, 255, 0.35)",
               backdropFilter: "blur(3px)",

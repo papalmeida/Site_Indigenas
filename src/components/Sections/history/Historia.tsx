@@ -51,19 +51,18 @@ const Historia = () => (
       sx={{
         width: "100%",
         backgroundColor: "#daeeb0",
-        py: { xs: 2, md: 3 },
         px: { xs: 2, md: 6 },
       }}
     >
       <Typography
         sx={{
-          fontSize: { xs: "2em", sm: "2.5em", md: "3em" },
-          fontWeight: 500,
+          fontSize: { xs: "2em", sm: "2.5em", md: "4em" },
+          fontWeight: 600,
           color: "#fff",
           opacity: 0.7,
-          textAlign: "center",
-          fontFamily: "serif",
-          letterSpacing: 1,
+          textAlign: "left",
+          fontFamily: "The-Seasons",
+          letterSpacing: 2,
           userSelect: "none",
         }}
       >
@@ -72,19 +71,21 @@ const Historia = () => (
       <Typography
         sx={{
           position: "absolute",
-          left: 0,
-          right: 0,
-          top: { xs: 18, md: 30 },
-          textAlign: "center",
-          fontFamily: "cursive",
-          fontSize: { xs: "1.2em", sm: "2em", md: "2.3em" },
+          left: 50,
+          top: "50%",
+          transform: "translate(0, -50%)",
+          textAlign: "left",
+          fontFamily: "Amsterdam-Four",
+          fontSize: { xs: "1.2em", sm: "2em", md: "4.5em" },
+          opacity: 0.6,
+          letterSpacing: 1,
           color: "#000",
           fontWeight: 400,
           zIndex: 2,
           pointerEvents: "none",
         }}
       >
-        História da aldeia Geru-Tucunã Pataxó
+        história da aldeia geru-tucunã pataxó
       </Typography>
     </Grid>
     {/* Linha do tempo */}

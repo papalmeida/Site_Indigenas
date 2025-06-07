@@ -1,0 +1,48 @@
+@font-face {
+  font-family: 'Amsterdam-Four';
+  src: url('../assets/fonts/AmsterdamFour.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'The-Seasons';
+  src: url('../assets/fonts/Fontspring-DEMO-theseasons-reg.otf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../assets/fonts/Montserrat-VariableFont_wght.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Codec-Pro';
+  src: url('../assets/fonts/CodecPro-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Centaur';
+  src: url('../assets/fonts/CENTAUR.TTF') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Oswald';
+  src: url('../assets/fonts/Oswald-VariableFont_wght.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Cocomat-Pro';
+  src: url('../assets/fonts/cocomat-pro-regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}

@@ -1,7 +1,7 @@
 import { Box, Typography, Grid } from "@mui/material";
-import ImgIndia from "../../../assets/img_colaboradores/img_india.jpg"
-import Faixa1 from "../../../assets/img_colaboradores/img1_colaboradores.png";
-import Faixa2 from "../../../assets/img_colaboradores/img2_colaboradores.png";
+import ImgIndia from "../../../assets/img/img_colaboradores/img_india.jpg";
+import Faixa1 from "../../../assets/img/img_colaboradores/img1_colaboradores.png";
+import Faixa2 from "../../../assets/img/img_colaboradores/img2_colaboradores.png";
 
 const colaboradores = [
   "Ana Clara Pires Soares Zuccoloto; Ana Beatriz Vieira Félix",
@@ -47,6 +47,7 @@ const Colaboradores = () => (
       <Grid item xs={12} md={10} sx={{ p: { xs: 2, md: 4 } }}>
         <Typography
           sx={{
+            fontFamily: "The-Seasons",
             fontWeight: 600,
             color: "#fff",
             fontSize: { xs: "1.2em", md: "1.4em" },
@@ -58,6 +59,7 @@ const Colaboradores = () => (
         <Typography
           sx={{
             color: "#232726",
+            fontFamily: "Codec-Pro",
             fontSize: { xs: "1em", md: "1.1em" },
             mb: 2,
           }}
@@ -73,6 +75,7 @@ const Colaboradores = () => (
           sx={{
             fontWeight: 600,
             color: "#fff",
+            fontFamily: "The-Seasons",
             fontSize: { xs: "1.1em", md: "1.2em" },
             mt: 2,
           }}
@@ -82,6 +85,7 @@ const Colaboradores = () => (
         <Typography
           sx={{
             color: "#232726",
+            fontFamily: "Codec-Pro",
             fontSize: { xs: "1em", md: "1.1em" },
             mb: 2,
           }}
@@ -92,6 +96,7 @@ const Colaboradores = () => (
           sx={{
             fontWeight: 600,
             color: "#fff",
+            fontFamily: "The-Seasons",
             fontSize: { xs: "1.1em", md: "1.2em" },
             mt: 2,
           }}
@@ -101,6 +106,7 @@ const Colaboradores = () => (
         <Typography
           sx={{
             color: "#232726",
+            fontFamily: "Codec-Pro",
             fontSize: { xs: "1em", md: "1.1em" },
           }}
         >

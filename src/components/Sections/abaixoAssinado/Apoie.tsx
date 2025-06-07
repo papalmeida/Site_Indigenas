@@ -1,6 +1,6 @@
 import { Box, Typography, Button, Grid } from "@mui/material";
-import ImgFundo from "../../../assets/img_apoie/fundo_arroz.webp";
-import ImgMao from "../../../assets/img_apoie/mao.png";
+import ImgFundo from "../../../assets/img/img_apoie/fundo_arroz.webp";
+import ImgMao from "../../../assets/img/img_apoie/mao.png";
 
 const Apoie = () => {
   return (
@@ -39,7 +39,7 @@ const Apoie = () => {
           position: "absolute",
           left: 0,
           bottom: 0,
-          width: { xs: 180, md: 250 },
+          width: { xs: 180, md: 350 },
           zIndex: 2,
           pointerEvents: "none",
           userSelect: "none",
@@ -59,11 +59,11 @@ const Apoie = () => {
       >
         <Typography
           sx={{
+            fontFamily: "The-Seasons",
             fontSize: { xs: "2em", sm: "2.5em", md: "2.8em" },
             fontWeight: 500,
             color: "#daeeb0",
             mb: 3,
-            fontFamily: "serif",
             lineHeight: 1.1,
           }}
         >
@@ -73,6 +73,7 @@ const Apoie = () => {
         </Typography>
         <Typography
           sx={{
+            fontFamily: "Codec-Pro",
             fontSize: { xs: "1em", sm: "1.1em", md: "1.2em" },
             color: "#f5f7e7",
             mb: 3,
@@ -97,6 +98,7 @@ const Apoie = () => {
         </Typography>
         <Typography
           sx={{
+            fontFamily: "Codec-Pro",
             fontWeight: 700,
             color: "#fff",
             mb: 4,
@@ -114,6 +116,7 @@ const Apoie = () => {
             borderRadius: "20px",
             px: 4,
             py: 1,
+            fontFamily: "Centaur",
             fontWeight: 500,
             letterSpacing: 1,
             fontSize: { xs: "0.9em", sm: "1em" },

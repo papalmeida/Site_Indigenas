@@ -1,6 +1,6 @@
 import { Box, Button, Grid, Typography } from "@mui/material";
-import ImgIntroduction from "../../../assets/img_introducao/img_introduction.jpeg";
-import ImgFundo from "../../../assets/img_introducao/fundo_branco.png";
+import ImgIntroduction from "../../../assets/img/img_introducao/img_introduction.jpeg";
+import ImgFundo from "../../../assets/img/img_introducao/fundo_branco.png";
 
 const IntroductionSection = () => {
   return (
@@ -57,6 +57,7 @@ const IntroductionSection = () => {
         >
           <Typography
             sx={{
+              fontFamily: "The-Seasons",
               fontSize: { xs: "2em", sm: "2.5em", md: "3em" },
               fontWeight: "bold",
               marginBottom: "20px",
@@ -68,18 +69,19 @@ const IntroductionSection = () => {
           </Typography>
           <Typography
             sx={{
+              fontFamily: "Codec-Pro",
               fontSize: { xs: "1.1em", sm: "1.2em", md: "1.3em" },
-              lineHeight: "1.6",
+              lineHeight: "1.5",
               color: "#333",
               maxWidth: "500px",
               textAlign: { xs: "justify", md: "start" }, // Justifica texto em telas pequenas
             }}
           >
-            Direito e memória indígena no Brasil: uma aliança prometida, mas uma
+            <b>Direito e memória indígena no Brasil:</b> uma aliança prometida, mas uma
             batalha diária. Este site desvenda como, apesar de um arcabouço
             legal, os povos originários continuam a lutar pelo reconhecimento e
             pela proteção de sua história viva. Nossa análise mergulha na
-            experiência da Aldeia Geru Tucunã Pataxó, examinando como as leis se
+            experiência da <b>Aldeia Geru Tucunã Pataxó</b>, examinando como as leis se
             aplicam em seu território e de que forma sua memória ancestral se
             manifesta como poderosa ferramenta de resistência contra o
             apagamento cultural.
@@ -89,12 +91,12 @@ const IntroductionSection = () => {
             sx={{
               color: "#71a637",
               borderColor: "#71a637",
-              borderRadius: "20px",
+              borderRadius: "40px",
               px: 4,
-              py: 1,
-              fontWeight: 500,
+              fontFamily: "Centaur",
+              fontWeight: 600,
               letterSpacing: 1,
-              fontSize: { xs: "0.9em", sm: "1em" },
+              fontSize: { xs: "1em", sm: "1.5em" },
               background: "rgba(218,238,176,0.15)",
               backdropFilter: "blur(3px)",
               textTransform: "none",

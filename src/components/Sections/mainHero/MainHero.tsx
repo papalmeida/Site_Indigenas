@@ -1,9 +1,9 @@
 import { Carousel } from "react-bootstrap";
-import "./MainHero.css";
+import "../../../styles/MainHero.css";
 import { Box, Grid, Typography } from "@mui/material";
-import img1 from "../../../assets/img_hero/img1.jpg";
-import img2 from "../../../assets/img_hero/img2.jpg";
-import img3 from "../../../assets/img_hero/img3.jpg";
+import img1 from "../../../assets/img/img_hero/img1.jpg";
+import img2 from "../../../assets/img/img_hero/img2.jpg";
+import img3 from "../../../assets/img/img_hero/img3.jpg";
 
 
 const images = [img1, img2, img3];
@@ -64,6 +64,7 @@ const Hero = () => (
       >
         <Typography
           sx={{
+            fontFamily: "Montserrat",
             color: "#fff",
             fontSize: { xs: "1em", sm: "1.1em", md: "1.2em" },
             letterSpacing: 1,
@@ -73,6 +74,7 @@ const Hero = () => (
         </Typography>
         <Typography
           sx={{
+            fontFamily: "Montserrat",
             color: "#fff",
             fontSize: { xs: "1em", sm: "1.1em", md: "1.2em" },
             letterSpacing: 1,
@@ -100,14 +102,14 @@ const Hero = () => (
             position="absolute"
             textAlign="left"
             sx={{
-              top: { sm: "-2.3rem", md: "-3rem", lg: "-2.9rem" },
-              fontFamily: "cursive",
-              fontSize: { xs: "1.7em" , sm: "2em", md: "2.7em" },
+              top: { sm: "-2.3rem", md: "-3rem", lg: "-5.4rem" },
+              fontFamily: "Amsterdam-Four",
+              fontSize: { xs: "1.7em" , sm: "2em", md: "4.5em" },
               color: "#fff",
               fontWeight: 400,
               mb: "-0.7em",
               textShadow: "0 2px 8px #0008",
-              letterSpacing: 3,
+              letterSpacing: 2,
               zIndex: 2
             }}
           >
@@ -116,11 +118,12 @@ const Hero = () => (
           <Typography
             textAlign="center"
             sx={{
+              fontFamily: "The-Seasons",
+              fontStyle: "normal",
               fontSize: { xs: "1.6em" , sm: "2.3em", md: "2.8em", lg: "3.5em" },
               fontWeight: 600,
               color: "#daeeb0",
-              letterSpacing: 1,
-              textShadow: "0 2px 8px #0008",
+              letterSpacing: 2,
               lineHeight: "1em",
               zIndex: 1
             }}
@@ -131,11 +134,12 @@ const Hero = () => (
         <Typography
           textAlign="center"
           sx={{
+            fontFamily: "Montserrat",
             fontSize: { xs: "1.1em" , sm: "1.4em", md: "1.4em", lg: "1.7rem" },
             fontWeight: 400,
             color: "#fff",
             textShadow: "0 2px 8px #0008",
-            letterSpacing: 2
+            letterSpacing: 1
           }}
         >
           Uma análise legal da proteção da identidade cultural

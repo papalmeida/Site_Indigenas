@@ -1,6 +1,7 @@
-import { Route, Routes } from 'react-router-dom'
-import Container from './components/common/Container'
+import { Route, Routes } from 'react-router-dom';
+import Container from './components/common/Container';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import './styles/fonts.css';
 
 function App() {
   return (
