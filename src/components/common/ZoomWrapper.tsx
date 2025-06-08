@@ -4,8 +4,8 @@ const ZoomWrapper = ({ children }: { children: React.ReactNode }) => (
   <Box
     sx={{
       transform: {
-        xs: "scale(0.75)",
-        sm: "scale(0.85)",
+        xs: "scale(0.5)",
+        sm: "scale(0.60)",
         md: "scale(1)",
       },
       transformOrigin: "top center",
