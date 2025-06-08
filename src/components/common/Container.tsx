@@ -8,6 +8,7 @@ import Visita from "../Sections/visit/Visita";
 import Apoie from "../Sections/abaixoAssinado/Apoie";
 import Colaboradores from "../Sections/colaboradores/Colaboradores";
 import Historia from "../Sections/history/Historia";
+import ZoomWrapper from "./ZoomWrapper";
 
 const Container = () => {
   return (
@@ -18,24 +19,35 @@ const Container = () => {
         justifyContent: "center",
         alignItems: "center",
         backgroundColor: "#f0efef",
-        transform: {
-          xs: "scale(0.75)",
-          sm: "scale(0.85)",
-          md: "scale(1)",
-        },
-        transformOrigin: "top center",
-        width: "100%",
       }}
     >
+      <ZoomWrapper>
       <NavBar />
-      <Hero />
+      </ZoomWrapper>
+      <ZoomWrapper>
+        <Hero />
+      </ZoomWrapper>
+      <ZoomWrapper>
       <IntroductionSection />
+      </ZoomWrapper>
+      <ZoomWrapper>
       <AldeiaHero />
+      </ZoomWrapper>
+      <ZoomWrapper>
       <Historia />
+      </ZoomWrapper>
+      <ZoomWrapper>
       <Visita />
+      </ZoomWrapper>
+      <ZoomWrapper>
       <Apoie />
+      </ZoomWrapper>
+      <ZoomWrapper>
       <Colaboradores />
+      </ZoomWrapper>
+      <ZoomWrapper>
       <Footer />
+      </ZoomWrapper>
     </Box>
   );
 };
