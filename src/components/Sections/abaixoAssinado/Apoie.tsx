@@ -1,7 +1,6 @@
 import { Box, Typography, Button, Grid } from "@mui/material";
 import ImgFundo from "../../../assets/img/img_apoie/fundo_arroz.webp";
 import ImgMao from "../../../assets/img/img_apoie/mao.png";
-import { Link } from "react-router-dom";
 
 const Apoie = () => {
   return (
