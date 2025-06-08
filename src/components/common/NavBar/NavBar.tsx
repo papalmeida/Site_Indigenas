@@ -19,7 +19,7 @@ const NavBar = () => {
               Introdução
             </Nav.Link>
             <Nav.Link className="mx-auto" href="#aldeia-hero">
-              Marco
+              Marcos
             </Nav.Link>
             <Nav.Link className="mx-auto" href="#historia">
               História

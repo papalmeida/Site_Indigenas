@@ -50,7 +50,7 @@ const Footer = () => {
         </IconButton>
       </Box>
       <Typography variant="body2" sx={{ mt: 1 }}>
-        © {new Date().getFullYear()} Projeto Indígenas
+        © {new Date().getFullYear()} Projeto Integrador - Direito e Memória
       </Typography>
     </Box>
   );

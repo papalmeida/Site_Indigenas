@@ -11,6 +11,7 @@ const Visita = () => {
       container
       justifyContent="center"
       alignItems="flex-start"
+      position="relative"
       sx={{
         background: "#daeeb0",
         backgroundImage: `url(${ImgFundo})`,
@@ -19,7 +20,6 @@ const Visita = () => {
         py: { xs: 4, md: 8 },
         px: { xs: 2, md: 6 },
         height: "100vh",
-        position: "relative",
         overflow: "hidden",
       }}
     >

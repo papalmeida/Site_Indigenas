@@ -4,7 +4,7 @@ import Faixa1 from "../../../assets/img/img_colaboradores/img1_colaboradores.png
 import Faixa2 from "../../../assets/img/img_colaboradores/img2_colaboradores.png";
 
 const colaboradores = [
-  "Ana Clara Pires Soares Zuccoloto; Ana Beatriz Vieira Félix",
+  "Ana Clara Pires Soares Zucoloto; Ana Beatriz Vieira Félix",
   "Deise Leisiana dos Reis Martins; Isabelle Lemos Vasconcelos",
   "Maria Vitória Alves Nereu Costa; Marielly Zanella Guedes",
   "Thamara Sales Vina; Vitória Amelia Pimenta Santos",
@@ -27,7 +27,6 @@ const Colaboradores = () => (
       alt=""
       sx={{
         width: "100%",
-        height: { xs: 220, md: 340 },
         objectFit: "cover",
         display: "block",
       }}

@@ -7,32 +7,33 @@ import ImgConvercao from "../../../assets/img/img_marcos/img_convercao.jpg";
 import ImgFunai from "../../../assets/img/img_marcos/img_funai.jpg";
 import ImgLivro from "../../../assets/img/img_marcos/img_livro.jpg";
 import { motion, AnimatePresence } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 
 // Slides com imagem + texto associado
 const slides = [
   {
     image: ImgBrasilia,
-    title: "O Marco do Reconhecimento Indígena na Constituição de 1988",
+    title: "Estatuto do Índio: Um Marco Normativo na Evolução do Direito Indígena",
     description:
-      "O artigo 231 da Constituição Federal de 1988 é um marco essencial, pois reconhece a organização social, os costumes, as línguas, as crenças e as tradições dos povos indígenas.",
+      "A Lei nº 6.001/73, conhecida como Estatuto do Índio, é um marco legal que garante direitos territoriais, culturais e políticos aos povos indígenas, promovendo sua integração com respeito às tradições e à participação nas decisões que os afetam.",
   },
   {
     image: ImgConvercao,
-    title: "Convenção 169 da OIT",
+    title: "Convenção 169  da OIT e os Povos Indígenas",
     description:
-      "Incorporada ao ordenamento jurídico brasileiro, reconhece os direitos dos povos indígenas e tribais, respeitando suas culturas e tradições, e reforça o princípio da consulta livre, prévia e informada.",
+      "Incorporada ao ordenamento jurídico brasileiro, reconhece os direitos dos povos indígenas e tribais, respeitando suas culturas e tradições, e reforça o princípio da consulta livre, prévia e informada",
   },
   {
     image: ImgFunai,
-    title: "O Papel da Funai",
+    title: "Fundação Nacional dos Povos Indígenas e seu Papel entre os Povos",
     description:
-      "A Fundação Nacional do Índio é o órgão indigenista oficial do Estado brasileiro, responsável por promover políticas de proteção aos direitos e ao modo de vida dos povos indígenas.",
+      "A Funai é fundamental na implementação e fiscalização dos direitos indígenas, colaborando na criação do Ministério dos Povos Indígenas. Ela protege territórios, valoriza culturas e defende a autodeterminação dos povos indígenas.",
   },
   {
     image: ImgLivro,
-    title: "Pluralidade Linguística e Cultural",
+    title: "O Marco do Reconhecimento Indígena na Constituição de 1988",
     description:
-      "O Brasil reconhece a diversidade linguística dos povos indígenas, garantindo o uso de suas línguas maternas e o acesso à educação bilíngue em suas comunidades.",
+      "O artigo 231 da Constituição Federal de 1988 é um marco essencial, pois reconhece a organização social, os costumes, as línguas, as crenças e as tradições dos povos indígenas.",
   },
 ];
 
@@ -43,6 +44,8 @@ const AldeiaHero = () => {
     setIndex(selectedIndex);
   const nextSlide = () => setIndex((prev) => (prev + 1) % slides.length);
 
+  const navigate = useNavigate();
+
   return (
     <Grid
       container
@@ -50,7 +53,6 @@ const AldeiaHero = () => {
       position="relative"
       id="aldeia-hero"
       sx={{
-        width: "100vw",
         height: "100vh",
         overflow: "hidden",
       }}
@@ -92,140 +94,142 @@ const AldeiaHero = () => {
         }}
       >
         <Grid
-          container
-          justifyContent="space-between"
-          alignItems="center"
+          item
           sx={{
-            mb: { xs: 2, md: 4 },
             borderBottom: "2px solid #fff",
             borderRadius: "2px",
             pb: 1,
           }}
         >
-          <Typography
-            sx={{
-              fontFamily: "Montserrat",
-              color: "#fff",
-              fontSize: { xs: "1em", sm: "1.1em", md: "1.2em" },
-              letterSpacing: 1,
-            }}
-          >
-            PROJETO INTEGRADOR
-          </Typography>
-          <Typography
-            sx={{
-              fontFamily: "Montserrat",
-              color: "#fff",
-              fontSize: { xs: "1em", sm: "1.1em", md: "1.2em" },
-              letterSpacing: 1,
-            }}
-          >
-            DIREITO DAS COISAS
-          </Typography>
+          <Grid container justifyContent="space-between" alignItems="center">
+            <Typography
+              sx={{
+                fontFamily: "Montserrat",
+                color: "#fff",
+                fontSize: { xs: "1em", sm: "1.1em", md: "1.2em" },
+                letterSpacing: 1,
+              }}
+            >
+              PROJETO INTEGRADOR
+            </Typography>
+            <Typography
+              sx={{
+                fontFamily: "Montserrat",
+                color: "#fff",
+                fontSize: { xs: "1em", sm: "1.1em", md: "1.2em" },
+                letterSpacing: 1,
+              }}
+            >
+              DIREITO DAS COISAS
+            </Typography>
+          </Grid>
         </Grid>
 
         {/* Texto dinâmico */}
         <Grid
-          container
-          flexDirection="column"
-          justifyContent="center"
-          alignItems="flex-start"
-          sx={{
-            maxWidth: { xs: "100%", md: "60%" },
-            mt: { xs: 2, md: 6 },
-          }}
+          item
         >
-          <AnimatePresence mode="wait">
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
-              transition={{ duration: 0.6 }}
-            >
-              <Typography
-                sx={{
-                  fontFamily: "The-Seasons",
-                  fontSize: { xs: "2em", sm: "2.5em", md: "3.5em" },
-                  color: "#fff",
-                  textAlign: "left",
-                  lineHeight: 1.1,
-                  mb: 2,
-                  textShadow: "0 2px 8px #0008",
-                  maxWidth: "550px",
-                }}
+          <Grid
+            item
+          >
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -20 }}
+                transition={{ duration: 0.6 }}
               >
-                {slides[index].title}
-              </Typography>
+                <Typography
+                  sx={{
+                    fontFamily: "The-Seasons",
+                    fontSize: { xs: "2em", sm: "2.5em", md: "3.2em" },
+                    color: "#fff",
+                    textAlign: "left",
+                    lineHeight: 1.1,
+                    mb: 2,
+                    textShadow: "0 2px 8px #0008",
+                    maxWidth: "550px",
+                  }}
+                >
+                  {slides[index].title}
+                </Typography>
 
-              <Typography
-                sx={{
-                  fontFamily: "Montserrat",
-                  fontSize: { xs: "1em", sm: "1.1em", md: "1.4em" },
-                  color: "#fff",
-                  textAlign: "left",
-                  lineHeight: 1.5,
-                  mb: 4,
-                  letterSpacing: 2,
-                  textShadow: "0 2px 8px #0008",
-                  maxWidth: 600,
-                }}
-              >
-                {slides[index].description}
-              </Typography>
-            </motion.div>
-          </AnimatePresence>
-        </Grid>
+                <Typography
+                  sx={{
+                    fontFamily: "Montserrat",
+                    fontSize: { xs: "1em", sm: "1.2em", md: "1.3em" },
+                    color: "#fff",
+                    textAlign: "left",
+                    lineHeight: 1.5,
+                    mb: 4,
+                    letterSpacing: 2,
+                    textShadow: "0 2px 8px #0008",
+                    maxWidth: 600,
+                  }}
+                >
+                  {slides[index].description}
+                </Typography>
+              </motion.div>
+            </AnimatePresence>
 
-        {/* Barra inferior + botão de próxima imagem */}
-        <Grid
-          container
-          alignItems="center"
-          justifyContent="space-between"
-          bottom="0"
-          px={{ xs: 4, sm: 6, md: 10 }}
-          py={2}
-          sx={{
-            borderTop: "2px solid #fff",
-            borderRadius: "2px",
-          }}
-        >
-          <Button
-            variant="outlined"
+          {/* Barra inferior + botão de próxima imagem */}
+          <Grid
+            container
+            justifyContent="space-between"
+            alignItems="center"
             sx={{
-              color: "#fff",
-              borderColor: "#fff",
-              borderRadius: "40px",
-              px: 4,
-              py: 1,
-              fontWeight: 500,
-              letterSpacing: 3,
-              fontFamily: "Montserrat",
-              fontSize: { xs: "0.9em", sm: "1em" },
-              background: "rgba(255, 255, 255, 0.35)",
-              backdropFilter: "blur(3px)",
-              textTransform: "uppercase",
-              "&:hover": {
-                background: "rgba(255,255,255,0.08)",
+              borderTop: "2px solid #fff",
+              borderRadius: "2px",
+              py: 2
+            }}
+          >
+          <Grid
+            container
+            justifyContent="space-between"
+            alignItems="center"
+          >
+            <Button
+              variant="outlined"
+              onClick={() => navigate("/referencias")}
+              sx={{
+                color: "#fff",
                 borderColor: "#fff",
-              },
-            }}
-          >
-            REFERÊNCIAS
-          </Button>
-          <IconButton
-            onClick={nextSlide}
-            sx={{
-              color: "#fff",
-              background: "rgba(0,0,0,0.2)",
-              "&:hover": { background: "rgba(255,255,255,0.2)" },
-              border: "1px solid #fff",
-              borderRadius: "50%",
-            }}
-          >
-            <ArrowForwardIosIcon />
-          </IconButton>
+                borderRadius: "40px",
+                px: 4,
+                py: 1,
+                fontWeight: 500,
+                letterSpacing: 3,
+                fontFamily: "Montserrat",
+                fontSize: { xs: "0.9em", sm: "1em" },
+                background: "rgba(255, 255, 255, 0.35)",
+                backdropFilter: "blur(3px)",
+                textTransform: "uppercase",
+                "&:hover": {
+                  background: "rgba(255,255,255,0.08)",
+                  borderColor: "#fff",
+                },
+              }}
+            >
+              REFERÊNCIAS
+            </Button>
+            <IconButton
+              onClick={nextSlide}
+              sx={{
+                color: "#fff",
+                background: "rgba(0,0,0,0.2)",
+                "&:hover": { background: "rgba(255,255,255,0.2)" },
+                border: "1px solid #fff",
+                borderRadius: "50%",
+              }}
+            >
+              <ArrowForwardIosIcon />
+            </IconButton>
+          </Grid>
+          </Grid>
+          </Grid>
         </Grid>
+
       </Grid>
     </Grid>
   );

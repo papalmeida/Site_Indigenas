@@ -1,6 +1,7 @@
 import { Box, Typography, Button, Grid } from "@mui/material";
 import ImgFundo from "../../../assets/img/img_apoie/fundo_arroz.webp";
 import ImgMao from "../../../assets/img/img_apoie/mao.png";
+import { Link } from "react-router-dom";
 
 const Apoie = () => {
   return (
@@ -25,7 +26,7 @@ const Apoie = () => {
           inset: 0,
           width: "100%",
           height: "100%",
-          bgcolor: "rgba(24,27,26,0.7)", 
+          bgcolor: "rgba(24,27,26,0.7)",
           zIndex: 1,
           pointerEvents: "none",
         }}
@@ -50,18 +51,18 @@ const Apoie = () => {
       <Grid
         container
         position="relative"
-        justifyContent={{md: "center", lg: "flex-end"}}
+        justifyContent={{ md: "center", lg: "flex-end" }}
         sx={{
           zIndex: 2,
-          paddingX:{xs: "20px", sm: "40px", md:"60px", lg:"90px"},
-          paddingY: "20px"
+          paddingX: { xs: "20px", sm: "40px", md: "60px", lg: "90px" },
+          paddingY: "20px",
         }}
       >
         <Grid
           container
-          justifyContent={{md: "center", lg: "flex-end"}}
+          justifyContent={{ md: "center", lg: "flex-end" }}
           sx={{
-            maxWidth: "1200px"
+            maxWidth: "1200px",
           }}
         >
           <Typography
@@ -75,7 +76,10 @@ const Apoie = () => {
               lineHeight: 1.1,
             }}
           >
-            Apoie a Demarcação da Terra<br/>Indígena Geru<span style={{fontFamily: "Montserrat"}}>-</span>Tucunã Pataxó<span style={{fontFamily: "Montserrat"}}>!</span>
+            Apoie a Demarcação da Terra
+            <br />
+            Indígena Geru<span style={{ fontFamily: "Montserrat" }}>-</span>
+            Tucunã Pataxó<span style={{ fontFamily: "Montserrat" }}>!</span>
           </Typography>
           <Typography
             sx={{
@@ -83,19 +87,19 @@ const Apoie = () => {
               fontSize: { xs: "1em", sm: "1.1em", md: "1.3em" },
               color: "#f5f7e7",
               mb: 3,
-              textAlign: {md: "center", lg: "right"},
+              textAlign: { md: "center", lg: "right" },
             }}
           >
             Nós, estudantes de Direito, tivemos o privilégio de conhecer a fundo
-            não apenas a luta diária da Aldeia Geru Tucunã Pataxó pela demarcação
-            de suas terras, mas também a relação indissociável entre seu direito à
-            memória, sua identidade cultural e a contínua batalha por direitos
-            historicamente violados. Vimos como a memória transcende a simples
-            recordação, emergindo como um pilar de resistência e instrumento
-            político contra narrativas hegemônicas e o persistente hiato entre os
-            direitos formalmente reconhecidos pela Constituição de 1988 e sua
-            aplicação prática. Em um apelo desta comunidade, decidimos criar este
-            abaixo-assinado.
+            não apenas a luta diária da Aldeia Geru Tucunã Pataxó pela
+            demarcação de suas terras, mas também a relação indissociável entre
+            seu direito à memória, sua identidade cultural e a contínua batalha
+            por direitos historicamente violados. Vimos como a memória
+            transcende a simples recordação, emergindo como um pilar de
+            resistência e instrumento político contra narrativas hegemônicas e o
+            persistente hiato entre os direitos formalmente reconhecidos pela
+            Constituição de 1988 e sua aplicação prática. Em um apelo desta
+            comunidade, decidimos criar este abaixo-assinado.
             <br />
             <b>
               A Aldeia Geru-Tucunã Pataxó conta com a gente para fazermos a
@@ -116,6 +120,10 @@ const Apoie = () => {
           </Typography>
         </Grid>
         <Button
+          component="a"
+          href="https://chng.it/Fk8GmKLkCH"
+          target="_blank"
+          rel="noopener noreferrer"
           variant="outlined"
           sx={{
             color: "#daeeb0",
