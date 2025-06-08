@@ -18,6 +18,13 @@ const Container = () => {
         justifyContent: "center",
         alignItems: "center",
         backgroundColor: "#f0efef",
+        transform: {
+          xs: "scale(0.75)",
+          sm: "scale(0.85)",
+          md: "scale(1)",
+        },
+        transformOrigin: "top center",
+        width: "100%",
       }}
     >
       <NavBar />
