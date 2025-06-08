@@ -15,22 +15,22 @@ const NavBar = () => {
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto mx-auto nav-underline">
-            <Nav.Link className="mx-auto nav_link_custom" href="#introducao">
+            <Nav.Link className="mx-auto" href="#introducao">
               Introdução
             </Nav.Link>
-            <Nav.Link className="mx-auto nav_link_custom" href="#aldeia-hero">
+            <Nav.Link className="mx-auto" href="#aldeia-hero">
               Marco
             </Nav.Link>
-            <Nav.Link className="mx-auto nav_link_custom" href="#historia">
+            <Nav.Link className="mx-auto" href="#historia">
               História
             </Nav.Link>
-            <Nav.Link className="mx-auto nav_link_custom" href="#visita">
+            <Nav.Link className="mx-auto" href="#visita">
               Visita
             </Nav.Link>
-            <Nav.Link className="mx-auto nav_link_custom" href="#apoie">
+            <Nav.Link className="mx-auto" href="#apoie">
               Apoie a Causa
             </Nav.Link>
-            <Nav.Link className="mx-auto nav_link_custom" href="#colaboradores">
+            <Nav.Link className="mx-auto" href="#colaboradores">
               Colaboradores
             </Nav.Link>
           </Nav>

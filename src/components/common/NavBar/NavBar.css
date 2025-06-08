@@ -4,13 +4,15 @@
 }
 
 .custom-navbar .nav-link {
+    font-family: Montserrat;
+    font-size: 1.2em;
+    text-align: center;
+    letter-spacing: 2;
     color: #edf5df !important;
     padding-left: 2rem;
     padding-right: 2rem;
     min-width: 140px; /* ajuste conforme necessário */
-    text-align: center;
     box-sizing: border-box;
-    font-weight: 600;
 }
 
 .custom-navbar .nav-link:hover {

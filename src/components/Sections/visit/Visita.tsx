@@ -46,7 +46,6 @@ const Visita = () => {
             color: "#f5f7e7",
             fontFamily: "The-Seasons",
             zIndex: 3,
-            marginBottom: "80px"
           }}
         >
           Visita e entrevista com o Cacique
@@ -55,8 +54,8 @@ const Visita = () => {
           container
           spacing={4}
           alignItems="center"
-          justifyContent="center"
-          sx={{ maxWidth: "1200px", margin: "0 auto", zIndex: 2 }}
+          justifyContent="space-evenly"
+          sx={{ margin: "0 auto", zIndex: 2 }}
         >
           <Grid
             item
@@ -66,8 +65,8 @@ const Visita = () => {
           >
             <Box
               sx={{
-                width: { xs: 320, sm: 380, md: 420 },
-                height: { xs: 200, sm: 240, md: 280 },
+                width: { xs: 320, sm: 380, md: 620 },
+                height: { xs: 200, sm: 240, md: 380 },
                 borderRadius: "16px",
                 boxShadow: 2,
                 position: "relative",
@@ -124,11 +123,11 @@ const Visita = () => {
             </Box>
           </Grid>
           {/* Texto */}
-          <Grid item xs={12} md={7}>
+          <Grid item xs={12} md={5}>
             <Typography
               sx={{
                 fontFamily: "Codec-Pro",
-                fontSize: { xs: "1em", sm: "1.1em", md: "1.2em" },
+                fontSize: { xs: "1em", sm: "1.1em", md: "1.3em" },
                 color: "#333",
                 maxWidth: 600,
                 textAlign: "left",
