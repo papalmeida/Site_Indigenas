@@ -88,7 +88,8 @@ const Apoie = () => {
               px: { xs: "10px", sm: "", md: "" },
               color: "#f5f7e7",
               mb: 3,
-              textAlign: { xs: "center", lg: "right" },
+              textAlign: { xs: "justify", lg: "right" },
+              
             }}
           >
             Nós, estudantes de Direito, tivemos o privilégio de conhecer a fundo

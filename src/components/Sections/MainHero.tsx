@@ -14,7 +14,7 @@ const Hero = () => (
     position="relative"
     sx={{
       width: "100vw",
-      height: "100vh",
+      height: { md:"100vh"},
       overflow: "hidden",
     }}
   >
@@ -65,7 +65,7 @@ const Hero = () => (
           sx={{
             fontFamily: "Montserrat",
             color: "#fff",
-            fontSize: { xs: "0.7em", sm: "1em", md: "1.2em" },
+            fontSize: { xs: "0.6em", sm: "1em", md: "1.2em" },
             letterSpacing: 1,
           }}
         >
@@ -75,7 +75,7 @@ const Hero = () => (
           sx={{
             fontFamily: "Montserrat",
             color: "#fff",
-            fontSize: { xs: "0.7em", sm: "1em", md: "1.2em" },
+            fontSize: { xs: "0.6em", sm: "1em", md: "1.2em" },
             letterSpacing: 1,
           }}
         >
@@ -88,7 +88,7 @@ const Hero = () => (
         alignItems="center"
         justifyContent="end"
         sx={{
-          flex: 1,
+          flex: {sm: 1},
           marginBottom: "30px",
         }}
       >

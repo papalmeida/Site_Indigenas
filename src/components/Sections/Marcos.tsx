@@ -53,7 +53,6 @@ const Marcos = () => {
       position="relative"
       id="marcos"
       sx={{
-        height: "100vh",
         overflow: "hidden",
       }}
     >
@@ -64,7 +63,7 @@ const Marcos = () => {
         indicators={false}
         interval={6000}
         fade
-        style={{ height: "100vh" }}
+        style={{ height: "100%" }}
       >
         {slides.map((slide, idx) => (
           <Carousel.Item key={idx}>
@@ -104,7 +103,7 @@ const Marcos = () => {
               sx={{
                 fontFamily: "Montserrat",
                 color: "#fff",
-                fontSize: { xs: "0.7em", sm: "1.1em", md: "1.2em" },
+                fontSize: { xs: "0.6em", sm: "1.1em", md: "1.2em" },
                 letterSpacing: 1,
               }}
             >
@@ -114,7 +113,7 @@ const Marcos = () => {
               sx={{
                 fontFamily: "Montserrat",
                 color: "#fff",
-                fontSize: { xs: "0.7em", sm: "1.1em", md: "1.2em" },
+                fontSize: { xs: "0.6em", sm: "1.1em", md: "1.2em" },
                 letterSpacing: 1,
               }}
             >
@@ -123,7 +122,7 @@ const Marcos = () => {
           </Grid>
         </Grid>
 
-        <Grid item>
+        <Grid>
           <Grid item>
             <AnimatePresence mode="wait">
               <motion.div
@@ -171,7 +170,6 @@ const Marcos = () => {
                 </Typography>
               </motion.div>
             </AnimatePresence>
-
             <Grid
               container
               justifyContent="space-between"
@@ -182,48 +180,42 @@ const Marcos = () => {
                 py: 2,
               }}
             >
-              <Grid
-                container
-                justifyContent="space-between"
-                alignItems="center"
-              >
-                <Button
-                  variant="outlined"
-                  onClick={() => navigate("/referencias")}
-                  sx={{
-                    color: "#fff",
+              <Button
+                variant="outlined"
+                onClick={() => navigate("/referencias")}
+                sx={{
+                  color: "#fff",
+                  borderColor: "#fff",
+                  borderRadius: "40px",
+                  px: 4,
+                  py: 1,
+                  fontWeight: 500,
+                  letterSpacing: 3,
+                  fontFamily: "Montserrat",
+                  fontSize: { xs: "0.9em", sm: "1em" },
+                  background: "rgba(255, 255, 255, 0.35)",
+                  backdropFilter: "blur(3px)",
+                  textTransform: "uppercase",
+                  "&:hover": {
+                    background: "rgba(255,255,255,0.08)",
                     borderColor: "#fff",
-                    borderRadius: "40px",
-                    px: 4,
-                    py: 1,
-                    fontWeight: 500,
-                    letterSpacing: 3,
-                    fontFamily: "Montserrat",
-                    fontSize: { xs: "0.9em", sm: "1em" },
-                    background: "rgba(255, 255, 255, 0.35)",
-                    backdropFilter: "blur(3px)",
-                    textTransform: "uppercase",
-                    "&:hover": {
-                      background: "rgba(255,255,255,0.08)",
-                      borderColor: "#fff",
-                    },
-                  }}
-                >
-                  REFERÊNCIAS
-                </Button>
-                <IconButton
-                  onClick={nextSlide}
-                  sx={{
-                    color: "#fff",
-                    background: "rgba(0,0,0,0.2)",
-                    "&:hover": { background: "rgba(255,255,255,0.2)" },
-                    border: "1px solid #fff",
-                    borderRadius: "50%",
-                  }}
-                >
-                  <ArrowForwardIosIcon />
-                </IconButton>
-              </Grid>
+                  },
+                }}
+              >
+                REFERÊNCIAS
+              </Button>
+              <IconButton
+                onClick={nextSlide}
+                sx={{
+                  color: "#fff",
+                  background: "rgba(0,0,0,0.2)",
+                  "&:hover": { background: "rgba(255,255,255,0.2)" },
+                  border: "1px solid #fff",
+                  borderRadius: "50%",
+                }}
+              >
+                <ArrowForwardIosIcon />
+              </IconButton>
             </Grid>
           </Grid>
         </Grid>
