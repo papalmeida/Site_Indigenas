@@ -104,7 +104,7 @@ const Marcos = () => {
               sx={{
                 fontFamily: "Montserrat",
                 color: "#fff",
-                fontSize: { xs: "0.8em", sm: "1.1em", md: "1.2em" },
+                fontSize: { xs: "0.7em", sm: "1.1em", md: "1.2em" },
                 letterSpacing: 1,
               }}
             >
@@ -114,7 +114,7 @@ const Marcos = () => {
               sx={{
                 fontFamily: "Montserrat",
                 color: "#fff",
-                fontSize: { xs: "0.8em", sm: "1.1em", md: "1.2em" },
+                fontSize: { xs: "0.7em", sm: "1.1em", md: "1.2em" },
                 letterSpacing: 1,
               }}
             >
@@ -127,7 +127,6 @@ const Marcos = () => {
           <Grid item>
             <AnimatePresence mode="wait">
               <motion.div
-                key={index}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -20 }}
@@ -136,25 +135,32 @@ const Marcos = () => {
                 <Typography
                   sx={{
                     fontFamily: "The-Seasons",
-                    fontSize: { xs: "2em", sm: "2.5em", md: "3.2em" },
+                    fontSize: { xs: "2em", sm: "2.5em", md: "2.8em" },
                     color: "#fff",
                     textAlign: "left",
                     lineHeight: 1.1,
                     mb: 2,
                     textShadow: "0 2px 8px #0008",
-                    maxWidth: "550px",
+                    maxWidth: "600px",
                   }}
                 >
                   {slides[index].title}
                 </Typography>
+              </motion.div>
 
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -20 }}
+                transition={{ duration: 0.6 }}
+              >
                 <Typography
                   sx={{
                     fontFamily: "Montserrat",
-                    fontSize: { xs: "1em", sm: "1.2em", md: "1.3em" },
+                    fontSize: { xs: "1em", sm: "1.2em", md: "1.2em" },
                     color: "#fff",
                     textAlign: "left",
-                    lineHeight: 1.5,
+                    lineHeight: 1.3,
                     mb: 4,
                     letterSpacing: 2,
                     textShadow: "0 2px 8px #0008",

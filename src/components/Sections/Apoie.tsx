@@ -82,6 +82,7 @@ const Apoie = () => {
           </Typography>
           <Typography
             sx={{
+              
               fontFamily: "Codec-Pro",
               fontSize: { xs: "1em", sm: "1.1em", md: "1.3em" },
               px: { xs: "10px", sm: "", md: "" },

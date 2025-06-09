@@ -65,7 +65,7 @@ const Hero = () => (
           sx={{
             fontFamily: "Montserrat",
             color: "#fff",
-            fontSize: { xs: "0.8em", sm: "1em", md: "1.2em" },
+            fontSize: { xs: "0.7em", sm: "1em", md: "1.2em" },
             letterSpacing: 1,
           }}
         >
@@ -75,7 +75,7 @@ const Hero = () => (
           sx={{
             fontFamily: "Montserrat",
             color: "#fff",
-            fontSize: { xs: "0.8em", sm: "1em", md: "1.2em" },
+            fontSize: { xs: "0.7em", sm: "1em", md: "1.2em" },
             letterSpacing: 1,
           }}
         >

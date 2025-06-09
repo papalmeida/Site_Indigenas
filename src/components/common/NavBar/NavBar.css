@@ -34,7 +34,7 @@
 /* Links */
 .custom-navbar .nav-link {
   font-family: Montserrat;
-  font-size: 1.2em;
+  font-size: 1em;
   text-align: center;
   letter-spacing: 2px;
   color: #edf5df !important;
@@ -42,6 +42,12 @@
   padding-right: 2rem;
   min-width: 140px;
   box-sizing: border-box;
+}
+
+@media (min-width: 1000px) {
+  .custom-navbar .nav-link {
+    font-size: 1em;
+  }
 }
 
 .custom-navbar .nav-link:hover {
