@@ -88,6 +88,10 @@ const Introducao = () => {
             resistência contra o apagamento cultural.
           </Typography>
           <Button
+            component="a"
+            href="https://docs.google.com/document/d/1CaubU52QwOCRz87eNzxCRvCKU9-Uo95CXj6S64GETeA/edit?usp=drivesdk"
+            target="_blank"
+            rel="noopener noreferrer"
             variant="outlined"
             sx={{
               color: "#71a637",

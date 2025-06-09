@@ -31,7 +31,6 @@ const Apoie = () => {
           pointerEvents: "none",
         }}
       />
-      {/* Mão estilizada à esquerda */}
       <Box
         component="img"
         src={ImgMao}
@@ -40,7 +39,7 @@ const Apoie = () => {
           position: "absolute",
           left: 0,
           bottom: 0,
-          width: { xs: 180, md: 250 },
+          width: { xs: 180, md: 220 },
           zIndex: 2,
           pointerEvents: "none",
           userSelect: "none",

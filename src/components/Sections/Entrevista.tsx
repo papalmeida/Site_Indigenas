@@ -39,7 +39,7 @@ const Entrevista = () => {
         <Typography
           sx={{
             textAlign: "center",
-            fontSize: { xs: "1.3em", sm: "2.3em", md: "3em", lg: "4em" },
+            fontSize: { xs: "1.4em", sm: "2.3em", md: "3em", lg: "4em" },
             fontWeight: 600,
             color: "#f5f7e7",
             fontFamily: "The-Seasons",
