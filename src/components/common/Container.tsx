@@ -8,6 +8,7 @@ import Visita from "../Sections/Entrevista";
 import Apoie from "../Sections/Apoie";
 import Colaboradores from "../Sections/Colaboradores";
 import Historia from "../Sections/Historia";
+import ScrollToTopButton from "./ScrollToTopButton";
 
 const Container = () => {
   return (
@@ -28,6 +29,7 @@ const Container = () => {
       <Visita />
       <Apoie />
       <Colaboradores />
+      <ScrollToTopButton />
       <Footer />
     </Box>
   );
