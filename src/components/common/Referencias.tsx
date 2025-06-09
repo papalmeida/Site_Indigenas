@@ -56,6 +56,7 @@ const Referencias = () => {
         <Grid
           container
           justifyContent="space-between"
+          alignItems="center"
           sx={{
             zIndex: 2,
           }}
@@ -107,13 +108,15 @@ const Referencias = () => {
         gap={2}
         alignItems="flex-start"
         sx={{
-          position: "relative",
-          minHeight: { xs: 400, md: 340 },
           paddingX: "2rem",
           paddingY: "2rem",
+          wordBreak: "break-word",
         }}
       >
-        <Typography paragraph sx={{ fontSize: "1.2rem" }}>
+        <Typography
+          paragraph
+          sx={{ fontSize: { xs: "1em", lg: "1.2rem" }, mb: 2 }}
+        >
           <strong>
             BRASIL. Ministério da Gestão e da Inovação em Serviços Públicos.
           </strong>{" "}
@@ -128,7 +131,10 @@ const Referencias = () => {
           . <strong>Acesso em: 5 maio 2025.</strong>
         </Typography>
 
-        <Typography paragraph sx={{ fontSize: "1.2rem", mb: 2 }}>
+        <Typography
+          paragraph
+          sx={{ fontSize: { xs: "1em", lg: "1.2rem" }, mb: 2 }}
+        >
           <strong>
             CABRAL, Rafael Lamera Giesta; MORAIS, Vitória Larissa Dantas de.
           </strong>{" "}
@@ -146,7 +152,10 @@ const Referencias = () => {
           . <strong>Acesso em: 5 maio 2025.</strong>
         </Typography>
 
-        <Typography paragraph sx={{ fontSize: "1.2rem", mb: 2 }}>
+        <Typography
+          paragraph
+          sx={{ fontSize: { xs: "1em", lg: "1.2rem" }, mb: 2 }}
+        >
           <strong>CONCEIÇÃO, Sekuai Braz da.</strong> A história da construção
           da Aldeia Gerú Tucunã Pataxó: estratégias para nossa permanência.
           Trabalho de Conclusão de Curso (Licenciatura em Formação Intercultural
@@ -161,7 +170,10 @@ const Referencias = () => {
           . <strong>Acesso em: 5 maio 2025.</strong>
         </Typography>
 
-        <Typography paragraph sx={{ fontSize: "1.2rem", mb: 2 }}>
+        <Typography
+          paragraph
+          sx={{ fontSize: { xs: "1em", lg: "1.2rem" }, mb: 2 }}
+        >
           <strong>TERRAS INDÍGENAS.</strong> MG - Indígenas Pataxó, da Aldeia
           Geru Tucunã, sofrem ameaças e ataques. Disponível em:{" "}
           <Link
@@ -173,7 +185,10 @@ const Referencias = () => {
           . <strong>Acesso em: 5 maio 2025.</strong>
         </Typography>
 
-        <Typography paragraph sx={{ fontSize: "1.2rem", mb: 2 }}>
+        <Typography
+          paragraph
+          sx={{ fontSize: { xs: "1em", lg: "1.2rem" }, mb: 2 }}
+        >
           <strong>PREFEITURA MUNICIPAL DE AÇUCENA.</strong> Aldeia Pataxó Geru
           Tucunã. Disponível em:{" "}
           <Link
@@ -185,7 +200,10 @@ const Referencias = () => {
           . <strong>Acesso em: 5 maio 2025.</strong>
         </Typography>
 
-        <Typography paragraph sx={{ fontSize: "1.2rem", mb: 2 }}>
+        <Typography
+          paragraph
+          sx={{ fontSize: { xs: "1em", lg: "1.2rem" }, mb: 2 }}
+        >
           <strong>
             SOARES, Leonardo Barros; COSTA, Catarina Chaves; BEZERRA, Luiza
             Brilhante; COSTA, Ana Paula Alvares; MOITA, Yasmin Nascimento.
@@ -202,7 +220,10 @@ const Referencias = () => {
           . <strong>Acesso em: 5 maio 2025.</strong>
         </Typography>
 
-        <Typography paragraph sx={{ fontSize: "1.2rem", mb: 2 }}>
+        <Typography
+          paragraph
+          sx={{ fontSize: { xs: "1em", lg: "1.2rem" }, mb: 2 }}
+        >
           <strong>INSTITUTO SOCIOAMBIENTAL.</strong> Constituição. Disponível
           em:{" "}
           <Link
@@ -214,7 +235,10 @@ const Referencias = () => {
           . <strong>Acesso em: 5 maio 2025.</strong>
         </Typography>
 
-        <Typography paragraph sx={{ fontSize: "1.2rem", mb: 2 }}>
+        <Typography
+          paragraph
+          sx={{ fontSize: { xs: "1em", lg: "1.2rem" }, mb: 2 }}
+        >
           <strong>AGÊNCIA NACIONAL DE TRANSPORTES TERRESTRES (ANTT).</strong>{" "}
           Convenção nº 169 da OIT - Povos Indígenas e Tribais. Disponível em:{" "}
           <Link
@@ -226,7 +250,10 @@ const Referencias = () => {
           . <strong>Acesso em: 5 maio 2025.</strong>
         </Typography>
 
-        <Typography paragraph sx={{ fontSize: "1.2rem", mb: 2 }}>
+        <Typography
+          paragraph
+          sx={{ fontSize: { xs: "1em", lg: "1.2rem" }, mb: 2 }}
+        >
           <strong>FUNDO BRASIL DE DIREITOS HUMANOS.</strong> Os direitos
           constitucionais dos povos indígenas. Disponível em:{" "}
           <Link
@@ -238,7 +265,10 @@ const Referencias = () => {
           . <strong>Acesso em: 5 maio 2025.</strong>
         </Typography>
 
-        <Typography paragraph sx={{ fontSize: "1.2rem", mb: 2 }}>
+        <Typography
+          paragraph
+          sx={{ fontSize: { xs: "1em", lg: "1.2rem" }, mb: 2 }}
+        >
           <strong>BRASIL. Presidência da República.</strong> Lei nº 6.001, de 19
           de dezembro de 1973. Dispõe sobre o Estatuto do Índio. Disponível em:{" "}
           <Link
@@ -250,7 +280,10 @@ const Referencias = () => {
           . <strong>Acesso em: 5 maio 2025.</strong>
         </Typography>
 
-        <Typography paragraph sx={{ fontSize: "1.2rem", mb: 2 }}>
+        <Typography
+          paragraph
+          sx={{ fontSize: { xs: "1em", lg: "1.2rem" }, mb: 2 }}
+        >
           <strong>BRASIL.</strong> Constituição da República Federativa do
           Brasil de 1988. Brasília, DF: Presidência da República, [1988].
           Disponível em:{" "}
@@ -263,7 +296,10 @@ const Referencias = () => {
           . <strong>Acesso em: 5 maio 2025.</strong>
         </Typography>
 
-        <Typography paragraph sx={{ fontSize: "1.2rem", mb: 2 }}>
+        <Typography
+          paragraph
+          sx={{ fontSize: { xs: "1em", lg: "1.2rem" }, mb: 2 }}
+        >
           <strong>BRASIL.</strong> Povos indígenas. Portal do Governo Federal,
           2025. Disponível em:{" "}
           <Link href="https://www.gov.br/povosindigenas/pt-br" target="_blank">
@@ -272,7 +308,10 @@ const Referencias = () => {
           . <strong>Acesso em: 26 maio 2025.</strong>
         </Typography>
 
-        <Typography paragraph sx={{ fontSize: "1.2rem", mb: 2 }}>
+        <Typography
+          paragraph
+          sx={{ fontSize: { xs: "1em", lg: "1.2rem" }, mb: 2 }}
+        >
           <strong>ONU BRASIL.</strong> Na ONU, Canadá reconhece que país falhou
           historicamente em proteger direitos dos indígenas. Brasil ONU, 2024.
           Disponível em:{" "}
@@ -285,7 +324,10 @@ const Referencias = () => {
           . <strong>Acesso em: 26 maio 2025.</strong>
         </Typography>
 
-        <Typography paragraph sx={{ fontSize: "1.2rem", mb: 2 }}>
+        <Typography
+          paragraph
+          sx={{ fontSize: { xs: "1em", lg: "1.2rem" }, mb: 2 }}
+        >
           <strong>ESQUERDA ONLINE.</strong> Resistência maori na Nova Zelândia
           contra projeto de lei racista. Esquerda Online, 16 nov. 2024.
           Disponível em:{" "}

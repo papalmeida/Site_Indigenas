@@ -18,14 +18,14 @@ const NavBar = () => {
             <Nav.Link className="mx-auto" href="#introducao">
               Introdução
             </Nav.Link>
-            <Nav.Link className="mx-auto" href="#aldeia-hero">
+            <Nav.Link className="mx-auto" href="#marcos">
               Marcos
             </Nav.Link>
             <Nav.Link className="mx-auto" href="#historia">
               História
             </Nav.Link>
-            <Nav.Link className="mx-auto" href="#visita">
-              Visita
+            <Nav.Link className="mx-auto" href="#entrevista">
+              Entrevista
             </Nav.Link>
             <Nav.Link className="mx-auto" href="#apoie">
               Apoie a Causa

@@ -1,24 +1,25 @@
 import { Box, Typography, Grid } from "@mui/material";
-import ImgIndia from "../../../assets/img/img_colaboradores/img_india.jpg";
-import Faixa1 from "../../../assets/img/img_colaboradores/img1_colaboradores.png";
-import Faixa2 from "../../../assets/img/img_colaboradores/img2_colaboradores.png";
+import ImgIndia from "../../assets/img/img_colaboradores/img_india.jpg";
+import Faixa1 from "../../assets/img/img_colaboradores/img1_colaboradores.png";
+import Faixa2 from "../../assets/img/img_colaboradores/img2_colaboradores.png";
 
 const colaboradores = [
   "Ana Clara Pires Soares Zucoloto; Ana Beatriz Vieira Félix",
   "Deise Leisiana dos Reis Martins; Isabelle Lemos Vasconcelos",
   "Maria Vitória Alves Nereu Costa; Marielly Zanella Guedes",
   "Thamara Sales Vina; Vitória Amelia Pimenta Santos",
-  "Yasmin Souza Dutra Lopes."
+  "Yasmin Souza Dutra Lopes.",
 ];
 
 const Colaboradores = () => (
-  <Grid 
+  <Grid
     id="colaboradores"
+    component="section"
     container
     position="relative"
-    sx={{ 
-      width: "100%", 
-      overflow: "hidden" 
+    sx={{
+      width: "100%",
+      overflow: "hidden",
     }}
   >
     <Box
@@ -31,7 +32,6 @@ const Colaboradores = () => (
         display: "block",
       }}
     />
-    {/* Bloco verde com informações */}
     <Grid
       container
       sx={{
@@ -109,7 +109,8 @@ const Colaboradores = () => (
             fontSize: { xs: "1em", md: "1.1em" },
           }}
         >
-          <b>Unileste</b> - Centro Universitário Católico do Leste de Minas Gerais
+          <b>Unileste</b> - Centro Universitário Católico do Leste de Minas
+          Gerais
         </Typography>
       </Grid>
       <Box
@@ -119,7 +120,7 @@ const Colaboradores = () => (
         sx={{
           position: "absolute",
           right: { xs: 10, md: 40 },
-          height:"100%",
+          height: "100%",
           bottom: 0,
           zIndex: 3,
           display: { xs: "none", md: "block" },
@@ -131,7 +132,7 @@ const Colaboradores = () => (
         alt="faixa decorativa 2"
         sx={{
           position: "absolute",
-          height:"60%",
+          height: "60%",
           right: { xs: 150, md: 210 },
           bottom: 0,
           zIndex: 3,

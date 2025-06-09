@@ -1,21 +1,49 @@
 .custom-navbar {
-    backdrop-filter: blur(3px);
-    background-color: rgba(0,0,0,0.15);
+  background-color: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
+/* Em telas pequenas, com menu fechado — esconder o fundo geral */
+@media (max-width: 991.98px) {
+  .custom-navbar {
+    background-color: transparent;
+    backdrop-filter: none;
+    border-bottom: none;
+  }
+
+  .custom-navbar:has(.navbar-collapse.show) {
+    background-color: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(6px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  /* O menu colapsado já fica escuro */
+  .custom-navbar .navbar-collapse.show {
+    padding: 1rem 0;
+  }
+
+  /* Botão do toggle */
+  .custom-navbar .navbar-toggler {
+    background-color: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(6px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+}
+
+/* Links */
 .custom-navbar .nav-link {
-    font-family: Montserrat;
-    font-size: 1.2em;
-    text-align: center;
-    letter-spacing: 2;
-    color: #edf5df !important;
-    padding-left: 2rem;
-    padding-right: 2rem;
-    min-width: 140px; /* ajuste conforme necessário */
-    box-sizing: border-box;
+  font-family: Montserrat;
+  font-size: 1.2em;
+  text-align: center;
+  letter-spacing: 2px;
+  color: #edf5df !important;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  min-width: 140px;
+  box-sizing: border-box;
 }
 
 .custom-navbar .nav-link:hover {
-    color: #f1f4e1 !important; /* amarelo, por exemplo */
+  color: #f1f4e1 !important;
 }
-

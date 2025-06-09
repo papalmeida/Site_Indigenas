@@ -2,18 +2,18 @@ import { useState, type SetStateAction } from "react";
 import { Carousel } from "react-bootstrap";
 import { Typography, Button, Grid, IconButton } from "@mui/material";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
-import ImgBrasilia from "../../../assets/img/img_marcos/img_brasilia.jpg";
-import ImgConvercao from "../../../assets/img/img_marcos/img_convercao.jpg";
-import ImgFunai from "../../../assets/img/img_marcos/img_funai.jpg";
-import ImgLivro from "../../../assets/img/img_marcos/img_livro.jpg";
+import ImgBrasilia from "../../assets/img/img_marcos/img_brasilia.jpg";
+import ImgConvercao from "../../assets/img/img_marcos/img_convercao.jpg";
+import ImgFunai from "../../assets/img/img_marcos/img_funai.jpg";
+import ImgLivro from "../../assets/img/img_marcos/img_livro.jpg";
 import { motion, AnimatePresence } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 
-// Slides com imagem + texto associado
 const slides = [
   {
     image: ImgBrasilia,
-    title: "Estatuto do Índio: Um Marco Normativo na Evolução do Direito Indígena",
+    title:
+      "Estatuto do Índio: Um Marco Normativo na Evolução do Direito Indígena",
     description:
       "A Lei nº 6.001/73, conhecida como Estatuto do Índio, é um marco legal que garante direitos territoriais, culturais e políticos aos povos indígenas, promovendo sua integração com respeito às tradições e à participação nas decisões que os afetam.",
   },
@@ -37,7 +37,7 @@ const slides = [
   },
 ];
 
-const AldeiaHero = () => {
+const Marcos = () => {
   const [index, setIndex] = useState(0);
 
   const handleSelect = (selectedIndex: SetStateAction<number>) =>
@@ -51,13 +51,12 @@ const AldeiaHero = () => {
       container
       component="section"
       position="relative"
-      id="aldeia-hero"
+      id="marcos"
       sx={{
         height: "100vh",
         overflow: "hidden",
       }}
     >
-      {/* Carrossel de fundo */}
       <Carousel
         activeIndex={index}
         onSelect={handleSelect}
@@ -76,7 +75,6 @@ const AldeiaHero = () => {
 
       <div className="hero-overlay" />
 
-      {/* Conteúdo sobreposto */}
       <Grid
         container
         flexDirection="column"
@@ -106,7 +104,7 @@ const AldeiaHero = () => {
               sx={{
                 fontFamily: "Montserrat",
                 color: "#fff",
-                fontSize: { xs: "1em", sm: "1.1em", md: "1.2em" },
+                fontSize: { xs: "0.8em", sm: "1.1em", md: "1.2em" },
                 letterSpacing: 1,
               }}
             >
@@ -116,7 +114,7 @@ const AldeiaHero = () => {
               sx={{
                 fontFamily: "Montserrat",
                 color: "#fff",
-                fontSize: { xs: "1em", sm: "1.1em", md: "1.2em" },
+                fontSize: { xs: "0.8em", sm: "1.1em", md: "1.2em" },
                 letterSpacing: 1,
               }}
             >
@@ -125,13 +123,8 @@ const AldeiaHero = () => {
           </Grid>
         </Grid>
 
-        {/* Texto dinâmico */}
-        <Grid
-          item
-        >
-          <Grid
-            item
-          >
+        <Grid item>
+          <Grid item>
             <AnimatePresence mode="wait">
               <motion.div
                 key={index}
@@ -173,66 +166,64 @@ const AldeiaHero = () => {
               </motion.div>
             </AnimatePresence>
 
-          {/* Barra inferior + botão de próxima imagem */}
-          <Grid
-            container
-            justifyContent="space-between"
-            alignItems="center"
-            sx={{
-              borderTop: "2px solid #fff",
-              borderRadius: "2px",
-              py: 2
-            }}
-          >
-          <Grid
-            container
-            justifyContent="space-between"
-            alignItems="center"
-          >
-            <Button
-              variant="outlined"
-              onClick={() => navigate("/referencias")}
+            <Grid
+              container
+              justifyContent="space-between"
+              alignItems="center"
               sx={{
-                color: "#fff",
-                borderColor: "#fff",
-                borderRadius: "40px",
-                px: 4,
-                py: 1,
-                fontWeight: 500,
-                letterSpacing: 3,
-                fontFamily: "Montserrat",
-                fontSize: { xs: "0.9em", sm: "1em" },
-                background: "rgba(255, 255, 255, 0.35)",
-                backdropFilter: "blur(3px)",
-                textTransform: "uppercase",
-                "&:hover": {
-                  background: "rgba(255,255,255,0.08)",
-                  borderColor: "#fff",
-                },
+                borderTop: "2px solid #fff",
+                borderRadius: "2px",
+                py: 2,
               }}
             >
-              REFERÊNCIAS
-            </Button>
-            <IconButton
-              onClick={nextSlide}
-              sx={{
-                color: "#fff",
-                background: "rgba(0,0,0,0.2)",
-                "&:hover": { background: "rgba(255,255,255,0.2)" },
-                border: "1px solid #fff",
-                borderRadius: "50%",
-              }}
-            >
-              <ArrowForwardIosIcon />
-            </IconButton>
-          </Grid>
-          </Grid>
+              <Grid
+                container
+                justifyContent="space-between"
+                alignItems="center"
+              >
+                <Button
+                  variant="outlined"
+                  onClick={() => navigate("/referencias")}
+                  sx={{
+                    color: "#fff",
+                    borderColor: "#fff",
+                    borderRadius: "40px",
+                    px: 4,
+                    py: 1,
+                    fontWeight: 500,
+                    letterSpacing: 3,
+                    fontFamily: "Montserrat",
+                    fontSize: { xs: "0.9em", sm: "1em" },
+                    background: "rgba(255, 255, 255, 0.35)",
+                    backdropFilter: "blur(3px)",
+                    textTransform: "uppercase",
+                    "&:hover": {
+                      background: "rgba(255,255,255,0.08)",
+                      borderColor: "#fff",
+                    },
+                  }}
+                >
+                  REFERÊNCIAS
+                </Button>
+                <IconButton
+                  onClick={nextSlide}
+                  sx={{
+                    color: "#fff",
+                    background: "rgba(0,0,0,0.2)",
+                    "&:hover": { background: "rgba(255,255,255,0.2)" },
+                    border: "1px solid #fff",
+                    borderRadius: "50%",
+                  }}
+                >
+                  <ArrowForwardIosIcon />
+                </IconButton>
+              </Grid>
+            </Grid>
           </Grid>
         </Grid>
-
       </Grid>
     </Grid>
   );
 };
 
-export default AldeiaHero;
+export default Marcos;

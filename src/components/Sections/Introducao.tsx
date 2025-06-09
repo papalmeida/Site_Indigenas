@@ -1,11 +1,12 @@
 import { Box, Button, Grid, Typography } from "@mui/material";
-import ImgIntroduction from "../../../assets/img/img_introducao/img_introduction.jpeg";
-import ImgFundo from "../../../assets/img/img_introducao/fundo_branco.png";
+import ImgIntroduction from "../../assets/img/img_introducao/img_introduction.jpeg";
+import ImgFundo from "../../assets/img/img_introducao/fundo_branco.png";
 
-const IntroductionSection = () => {
+const Introducao = () => {
   return (
     <Grid
       container
+      component="section"
       id="introducao"
       alignItems="center"
       justifyContent="center"
@@ -42,7 +43,7 @@ const IntroductionSection = () => {
           textAlign: { xs: "center", md: "left" },
           boxSizing: "border-box",
           overflowX: "hidden",
-          zIndex: 2
+          zIndex: 2,
         }}
       >
         <Grid
@@ -52,7 +53,7 @@ const IntroductionSection = () => {
           sx={{
             display: "flex",
             flexDirection: "column",
-            alignItems: { sm: "center", md: "flex-start" }, // Centraliza conteúdo em telas pequenas
+            alignItems: { sm: "center", md: "flex-start" },
           }}
         >
           <Typography
@@ -70,21 +71,21 @@ const IntroductionSection = () => {
           <Typography
             sx={{
               fontFamily: "Codec-Pro",
-              fontSize: { xs: "1.1em", sm: "1.2em", md: "1.3em" },
+              fontSize: { xs: "1em", sm: "1.2em", md: "1.3em" },
               lineHeight: "1.5",
               color: "#333",
               maxWidth: "500px",
-              textAlign: { xs: "justify", md: "start" }, // Justifica texto em telas pequenas
+              textAlign: { xs: "justify", md: "start" },
             }}
           >
-            <b>Direito e memória indígena no Brasil:</b> uma aliança prometida, mas uma
-            batalha diária. Este site desvenda como, apesar de um arcabouço
-            legal, os povos originários continuam a lutar pelo reconhecimento e
-            pela proteção de sua história viva. Nossa análise mergulha na
-            experiência da <b>Aldeia Geru Tucunã Pataxó</b>, examinando como as leis se
-            aplicam em seu território e de que forma sua memória ancestral se
-            manifesta como poderosa ferramenta de resistência contra o
-            apagamento cultural.
+            <b>Direito e memória indígena no Brasil:</b> uma aliança prometida,
+            mas uma batalha diária. Este site desvenda como, apesar de um
+            arcabouço legal, os povos originários continuam a lutar pelo
+            reconhecimento e pela proteção de sua história viva. Nossa análise
+            mergulha na experiência da <b>Aldeia Geru Tucunã Pataxó</b>,
+            examinando como as leis se aplicam em seu território e de que forma
+            sua memória ancestral se manifesta como poderosa ferramenta de
+            resistência contra o apagamento cultural.
           </Typography>
           <Button
             variant="outlined"
@@ -117,7 +118,7 @@ const IntroductionSection = () => {
           sx={{
             display: "flex",
             justifyContent: "center",
-            alignItems: { xs: "center", md: "flex-start" }, // Centraliza imagem em telas pequenas
+            alignItems: { xs: "center", md: "flex-start" },
           }}
         >
           <Box
@@ -144,4 +145,4 @@ const IntroductionSection = () => {
   );
 };
 
-export default IntroductionSection;
+export default Introducao;

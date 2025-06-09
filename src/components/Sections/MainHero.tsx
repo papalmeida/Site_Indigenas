@@ -1,10 +1,9 @@
 import { Carousel } from "react-bootstrap";
-import "../../../styles/MainHero.css";
+import "../../styles/MainHero.css";
 import { Box, Grid, Typography } from "@mui/material";
-import img1 from "../../../assets/img/img_hero/img1.jpg";
-import img2 from "../../../assets/img/img_hero/img2.jpg";
-import img3 from "../../../assets/img/img_hero/img3.jpg";
-
+import img1 from "../../assets/img/img_hero/img1.jpg";
+import img2 from "../../assets/img/img_hero/img2.jpg";
+import img3 from "../../assets/img/img_hero/img3.jpg";
 
 const images = [img1, img2, img3];
 
@@ -59,14 +58,14 @@ const Hero = () => (
           mb: 2,
           borderBottom: "2px solid #fff",
           borderRadius: "2px",
-          pb: 1
+          pb: 1,
         }}
       >
         <Typography
           sx={{
             fontFamily: "Montserrat",
             color: "#fff",
-            fontSize: { xs: "1em", sm: "1.1em", md: "1.2em" },
+            fontSize: { xs: "0.8em", sm: "1em", md: "1.2em" },
             letterSpacing: 1,
           }}
         >
@@ -76,14 +75,13 @@ const Hero = () => (
           sx={{
             fontFamily: "Montserrat",
             color: "#fff",
-            fontSize: { xs: "1em", sm: "1.1em", md: "1.2em" },
+            fontSize: { xs: "0.8em", sm: "1em", md: "1.2em" },
             letterSpacing: 1,
           }}
         >
           DIREITO DAS COISAS
         </Typography>
       </Grid>
-      {/* Main content */}
       <Grid
         container
         flexDirection="column"
@@ -94,23 +92,20 @@ const Hero = () => (
           marginBottom: "30px",
         }}
       >
-        <Grid
-          position="relative"
-          justifyContent="center"
-        >
+        <Grid position="relative" justifyContent="center">
           <Typography
-            position="absolute"
-            textAlign="left"
+            position="relative"
             sx={{
-              top: { sm: "-2.3rem", md: "-3rem", lg: "-5.4rem" },
+              textAlign: { xs: "center", sm: "left" },
+              top: { xs: "-0.8rem", sm: "-1rem", md: "-1.4rem", lg: "-1.8rem" },
               fontFamily: "Amsterdam-Four",
-              fontSize: { xs: "1.7em" , sm: "2em", md: "4.5em" },
+              fontSize: { xs: "1.7em", sm: "2.5em", md: "3.5em", lg: "4.4rem" },
               color: "#fff",
               fontWeight: 400,
               mb: "-0.7em",
               textShadow: "0 2px 8px #0008",
               letterSpacing: 2,
-              zIndex: 2
+              zIndex: 2,
             }}
           >
             aldeia geru tucunã pataxó
@@ -120,12 +115,12 @@ const Hero = () => (
             sx={{
               fontFamily: "The-Seasons",
               fontStyle: "normal",
-              fontSize: { xs: "1.6em" , sm: "2.3em", md: "2.8em", lg: "3.5em" },
+              fontSize: { xs: "1.6em", sm: "2em", md: "2.8em", lg: "3.5em" },
               fontWeight: 600,
               color: "#daeeb0",
               letterSpacing: 2,
               lineHeight: "1em",
-              zIndex: 1
+              zIndex: 1,
             }}
           >
             DIREITO E MEMÓRIA INDÍGENA
@@ -135,11 +130,11 @@ const Hero = () => (
           textAlign="center"
           sx={{
             fontFamily: "Montserrat",
-            fontSize: { xs: "1.1em" , sm: "1.4em", md: "1.4em", lg: "1.7rem" },
+            fontSize: { xs: "1.1em", sm: "1.4em", md: "1.4em", lg: "1.7rem" },
             fontWeight: 400,
             color: "#fff",
             textShadow: "0 2px 8px #0008",
-            letterSpacing: 1
+            letterSpacing: 1,
           }}
         >
           Uma análise legal da proteção da identidade cultural
@@ -147,7 +142,6 @@ const Hero = () => (
           dos povos indígenas no Brasil.
         </Typography>
       </Grid>
-      {/* Bottom bar */}
       <Grid
         container
         alignItems="center"
@@ -157,7 +151,7 @@ const Hero = () => (
       >
         <Box
           sx={{ flex: 1, borderBottom: "2px solid #fff", borderRadius: "2px" }}
-        />          
+        />
       </Grid>
     </Grid>
   </Grid>
