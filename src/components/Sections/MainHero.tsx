@@ -9,6 +9,7 @@ const images = [img1, img2, img3];
 
 const Hero = () => (
   <Grid
+    id="home"
     container
     component="section"
     position="relative"
