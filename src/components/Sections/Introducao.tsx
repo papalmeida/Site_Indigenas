@@ -13,6 +13,7 @@ const Introducao = () => {
       sx={{
         backgroundColor: "#fff",
         width: "100%",
+        minHeight: "100vh",
         position: "relative",
         overflow: "hidden",
       }}
@@ -72,7 +73,7 @@ const Introducao = () => {
             sx={{
               fontFamily: "Codec-Pro",
               fontSize: { xs: "1em", sm: "1.2em", md: "1.3em" },
-              lineHeight: "1.5",
+              lineHeight: "1.4",
               color: "#333",
               maxWidth: "500px",
               textAlign: { xs: "justify", md: "start" },
