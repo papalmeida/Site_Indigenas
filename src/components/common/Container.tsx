@@ -12,43 +12,45 @@ import ZoomWrapper from "./ZoomWrapper";
 
 const Container = () => {
   return (
-    <Box
-      sx={{
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "center",
-        alignItems: "center",
-        backgroundColor: "#f0efef",
-      }}
-    >
-      <ZoomWrapper>
-      <NavBar />
-      </ZoomWrapper>
-      <ZoomWrapper>
-        <Hero />
-      </ZoomWrapper>
-      <ZoomWrapper>
-      <IntroductionSection />
-      </ZoomWrapper>
-      <ZoomWrapper>
-      <AldeiaHero />
-      </ZoomWrapper>
-      <ZoomWrapper>
-      <Historia />
-      </ZoomWrapper>
-      <ZoomWrapper>
-      <Visita />
-      </ZoomWrapper>
-      <ZoomWrapper>
-      <Apoie />
-      </ZoomWrapper>
-      <ZoomWrapper>
-      <Colaboradores />
-      </ZoomWrapper>
-      <ZoomWrapper>
-      <Footer />
-      </ZoomWrapper>
-    </Box>
+    <ZoomWrapper>
+      <Box
+        sx={{
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "center",
+          alignItems: "center",
+          backgroundColor: "#f0efef",
+        }}
+      >
+        <ZoomWrapper>
+        <NavBar />
+        </ZoomWrapper>
+        <ZoomWrapper>
+          <Hero />
+        </ZoomWrapper>
+        <ZoomWrapper>
+        <IntroductionSection />
+        </ZoomWrapper>
+        <ZoomWrapper>
+        <AldeiaHero />
+        </ZoomWrapper>
+        <ZoomWrapper>
+        <Historia />
+        </ZoomWrapper>
+        <ZoomWrapper>
+        <Visita />
+        </ZoomWrapper>
+        <ZoomWrapper>
+        <Apoie />
+        </ZoomWrapper>
+        <ZoomWrapper>
+        <Colaboradores />
+        </ZoomWrapper>
+        <ZoomWrapper>
+        <Footer />
+        </ZoomWrapper>
+      </Box>
+    </ZoomWrapper>
   );
 };
 
