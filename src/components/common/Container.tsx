@@ -8,11 +8,9 @@ import Visita from "../Sections/visit/Visita";
 import Apoie from "../Sections/abaixoAssinado/Apoie";
 import Colaboradores from "../Sections/colaboradores/Colaboradores";
 import Historia from "../Sections/history/Historia";
-import ZoomWrapper from "./ZoomWrapper";
 
 const Container = () => {
   return (
-    <ZoomWrapper>
       <Box
         sx={{
           display: "flex",
@@ -22,35 +20,16 @@ const Container = () => {
           backgroundColor: "#f0efef",
         }}
       >
-        <ZoomWrapper>
         <NavBar />
-        </ZoomWrapper>
-        <ZoomWrapper>
           <Hero />
-        </ZoomWrapper>
-        <ZoomWrapper>
         <IntroductionSection />
-        </ZoomWrapper>
-        <ZoomWrapper>
         <AldeiaHero />
-        </ZoomWrapper>
-        <ZoomWrapper>
         <Historia />
-        </ZoomWrapper>
-        <ZoomWrapper>
         <Visita />
-        </ZoomWrapper>
-        <ZoomWrapper>
         <Apoie />
-        </ZoomWrapper>
-        <ZoomWrapper>
         <Colaboradores />
-        </ZoomWrapper>
-        <ZoomWrapper>
         <Footer />
-        </ZoomWrapper>
       </Box>
-    </ZoomWrapper>
   );
 };
 
