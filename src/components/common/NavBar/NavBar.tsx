@@ -1,60 +1,19 @@
-import { useState, useEffect } from "react";
-import { Nav, Navbar } from "react-bootstrap";
+import { Nav } from "react-bootstrap";
+import Navbar from "react-bootstrap/Navbar";
 import "./NavBar.css";
 
 const NavBar = () => {
-  const [activeLink, setActiveLink] = useState("");
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const sections = [
-        "home",
-        "introducao",
-        "marcos",
-        "historia",
-        "entrevista",
-        "apoie",
-        "colaboradores",
-      ];
-
-      let currentSectionId = "";
-
-      for (const id of sections) {
-        const section = document.getElementById(id);
-        if (section) {
-          const offset = 150;
-          if (window.scrollY >= section.offsetTop - offset) {
-            currentSectionId = id;
-          }
-        }
-      }
-
-      if (currentSectionId === "home") 
-          setActiveLink("");
-
-    };
-
-    window.addEventListener("scroll", handleScroll);
-
-    handleScroll();
-
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
   return (
     <Navbar
       collapseOnSelect
       expand="lg"
+      data-bs-theme="dark"
       className="custom-navbar"
       fixed="top"
     >
       <Navbar.Toggle aria-controls="responsive-navbar-nav" className="m-2" />
       <Navbar.Collapse id="responsive-navbar-nav">
-        <Nav
-          className="me-auto mx-auto nav-underline"
-          activeKey={activeLink}
-          onSelect={(selectedKey) => setActiveLink(selectedKey || "")}
-        >
+        <Nav className="me-auto mx-auto nav-underline">
           <Nav.Link className="mx-auto" href="#introducao">
             Introdução
           </Nav.Link>
