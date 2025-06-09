@@ -11,17 +11,17 @@ const Entrevista = () => {
       component="section"
       container
       justifyContent="center"
-      alignItems="flex-start"
       position="relative"
       sx={{
+        alignItems: { xs: "center", md: "flex-start" },
         background: "#daeeb0",
         backgroundImage: `url(${ImgFundo})`,
         backgroundSize: "cover",
         width: "100%",
         py: { xs: 4, md: 8 },
         px: { xs: 2, md: 6 },
+        pb: {lg: 10},
         overflow: "hidden",
-        height: { lg: "100vh" },
       }}
     >
       <Box
@@ -51,23 +51,18 @@ const Entrevista = () => {
         </Typography>
         <Grid
           container
-          spacing={2}
-          justifyContent="center"
-          alignItems="center"
+          justifyContent="space-evenly"
           sx={{
             zIndex: 2,
             maxWidth: "1400px",
           }}
         >
           <Grid
-            xs={12}
-            md={12}
-            lg={6}
+            xs={12} md={5} lg={5.5}
             container
             justifyContent="center"
-            sx={{
-              paddingX: { xs: "20px" },
-            }}
+            alignItems="center"
+            sx={{}}
           >
             <Grid
               container
@@ -129,14 +124,9 @@ const Entrevista = () => {
             </Grid>
           </Grid>
           <Grid
-            xs={12}
-            md={12}
-            lg={6}
+            xs={12} md={5} lg={5.5}
             container
             justifyContent="center"
-            sx={{
-              paddingX: { xs: "20px" },
-            }}
           >
             <Typography
               sx={{
