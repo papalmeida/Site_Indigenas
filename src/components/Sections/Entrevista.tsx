@@ -20,7 +20,7 @@ const Entrevista = () => {
         width: "100%",
         py: { xs: 4, md: 8 },
         px: { xs: 2, md: 6 },
-        pb: {lg: 10},
+        pb: { lg: 10 },
         overflow: "hidden",
       }}
     >
@@ -45,6 +45,7 @@ const Entrevista = () => {
             fontFamily: "The-Seasons",
             zIndex: 3,
             pb: { xs: "40px", lg: "70px" },
+            textShadow: "2px 2px 6px rgba(0, 0, 0, 0.5)",
           }}
         >
           Visita e entrevista com o Cacique
@@ -58,7 +59,9 @@ const Entrevista = () => {
           }}
         >
           <Grid
-            xs={12} md={5} lg={5.5}
+            xs={12}
+            md={5}
+            lg={5.5}
             container
             justifyContent="center"
             alignItems="center"
@@ -123,11 +126,7 @@ const Entrevista = () => {
               </Box>
             </Grid>
           </Grid>
-          <Grid
-            xs={12} md={5} lg={5.5}
-            container
-            justifyContent="center"
-          >
+          <Grid xs={12} md={5} lg={5.5} container justifyContent="center">
             <Typography
               sx={{
                 fontFamily: "Codec-Pro",
