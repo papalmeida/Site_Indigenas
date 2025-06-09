@@ -76,7 +76,7 @@ const Footer = () => {
       <Typography variant="body2">
         Desenvolvido por{" "}
         <Link
-          href="https://www.instagram.com/augusto.pedro12/"
+          href="https://github.com/papalmeida"
           sx={{
             textDecoration: "none",
             color: "inherit",

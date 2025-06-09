@@ -39,7 +39,7 @@ const Introducao = () => {
         spacing={3}
         gap={3}
         sx={{
-          padding: "60px",
+          padding: "40px",
           width: "1300px",
           textAlign: { xs: "center", md: "left" },
           boxSizing: "border-box",
