@@ -89,7 +89,7 @@ const Colaboradores = () => (
             mb: 2,
           }}
         >
-          Prof. Hermundes Souza Flores de Mendonça
+          <b>Prof.</b> Hermundes Souza Flores de Mendonça
         </Typography>
         <Typography
           sx={{
