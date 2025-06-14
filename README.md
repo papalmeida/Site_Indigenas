@@ -33,14 +33,14 @@ Você pode acessar a versão publicada do site diretamente pelo link:
 ## 🔹 Créditos
 
 - **Pesquisa de Conteúdo:**
-- Ana Clara Pires Soares Zucoloto
-- Ana Beatriz Vieira Félix
-- Deise Leisiana dos Reis Martins
-- Isabele Lemos Vasconcelos
-- Maria Vitória Alves Nereu Costa
-- Marielly Zanella Guedes, Thamara Sales Viana
-- Victória Amelia Pimenta Santos
-- Yasmim Souza Dutra Lopes
+  - Ana Clara Pires Soares Zucoloto
+  - Ana Beatriz Vieira Félix
+  - Deise Leisiana dos Reis Martins
+  - Isabele Lemos Vasconcelos
+  - Maria Vitória Alves Nereu Costa
+  - Marielly Zanella Guedes, Thamara Sales Viana
+  - Victória Amelia Pimenta Santos
+  - Yasmim Souza Dutra Lopes
 
 - **Curso:** Direito  
 - **Disciplina:** (Perguntar pra Ana) 
