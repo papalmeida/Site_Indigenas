@@ -9,8 +9,8 @@ const Apoie = () => {
       component="section"
       container
       flexDirection="column"
-      alignItems="end"
       justifyContent="center"
+      alignItems="end"
       position="relative"
       paddingX={"20px"}
       sx={{
@@ -50,10 +50,12 @@ const Apoie = () => {
       <Grid
         container
         position="relative"
-        justifyContent={{ xs: "center", lg: "flex-end" }}
+        alignItems={{ xs: "center", lg: "flex-end"}}
+        flexDirection="column"
         sx={{
           zIndex: 2,
           paddingY: "20px",
+          maxWidth: "1200px"
         }}
       >
         <Grid
