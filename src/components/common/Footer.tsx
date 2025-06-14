@@ -87,7 +87,7 @@ const Footer = () => {
         </Link>
       </Typography>
       <Typography variant="body2" sx={{ mt: 1 }}>
-        © {new Date().getFullYear()} Projeto Integrador - Direito e Memória
+        <em>© {new Date().getFullYear()} Projeto Integrador - Direito e Memória</em>
       </Typography>
     </Box>
   );
