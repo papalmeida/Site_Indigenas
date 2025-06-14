@@ -6,14 +6,14 @@ Este é um **projeto desenvolvido como parte do trabalho integrador de Direito**
 
 ---
 
-## 🔹 Sobre o Projeto
+## - Sobre o Projeto
 
 Este site revela como o direito formal, apesar de possuir mecanismos de proteção, ainda enfrenta dificuldades na eficácia da demarcação de terras indígenas e na preservação da memória, tradição e organização social desses povos.  
 Com ele, compartilhamos o resultado de uma **pesquisa jurídico-antropológica**, fruto de um trabalho de campo realizado na Aldeia Geru Tucunã Pataxó (Açucena/MG).
 
 ---
 
-## 🔹 Tecnologias Utilizadas
+## - Tecnologias Utilizadas
 
 - **Vite + React**
 - **Framer Motion**
@@ -22,7 +22,7 @@ Com ele, compartilhamos o resultado de uma **pesquisa jurídico-antropológica**
 
 ---
 
-## 🔹 Acesse o Projeto
+## - Acesse o Projeto
 
 Você pode acessar a versão publicada do site diretamente pelo link:
 
@@ -30,7 +30,7 @@ Você pode acessar a versão publicada do site diretamente pelo link:
 
 ---
 
-## 🔹 Créditos
+## - Créditos
 
 - **Pesquisa de Conteúdo:**
   - Ana Clara Pires Soares Zucoloto
