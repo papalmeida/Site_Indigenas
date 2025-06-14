@@ -1,4 +1,4 @@
-# 🌲 Direito e Memória Indígena
+#  Direito e Memória Indígena
 
 ## Uma Análise Jurídica da Proteção da Identidade Cultural dos Povos Originários do Brasil
 
