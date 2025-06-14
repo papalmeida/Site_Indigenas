@@ -46,7 +46,7 @@ Você pode acessar a versão publicada do site diretamente pelo link:
 - **Disciplina:** (Perguntar pra Ana) 
 - **Instituição:** Unileste - Centro Universitário Católico do Leste de Minas Gerais
 
-- **Desenvolvido Por (Site):** Pedro Augusto Pinto de Almeida
+- **Desenvolvido por** [Pedro Augusto Pinto de Almeida](https://github.com/papalmeida)
   
 ---
 
