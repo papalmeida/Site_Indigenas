@@ -140,7 +140,7 @@ const Hero = () => (
         >
           Uma análise legal da proteção da identidade cultural
           <br />
-          dos povos indígenas no Brasil.
+          dos povos originários no Brasil.
         </Typography>
       </Grid>
       <Grid

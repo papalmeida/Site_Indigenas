@@ -15,25 +15,25 @@ const slides = [
     title:
       "Estatuto do Índio: Um Marco Normativo na Evolução do Direito Indígena",
     description:
-      "A Lei nº 6.001/73, conhecida como Estatuto do Índio, é um marco legal que garante direitos territoriais, culturais e políticos aos povos indígenas, promovendo sua integração com respeito às tradições e à participação nas decisões que os afetam.",
+      "A Lei nº 6.001/73, conhecida como Estatuto do Índio, é um marco legal que garante direitos territoriais, culturais e políticos aos povos originários, promovendo sua integração com respeito às tradições e à participação nas decisões que os afetam.",
   },
   {
     image: ImgConvercao,
-    title: "Convenção 169  da OIT e os Povos Indígenas",
+    title: "Convenção 169  da OIT e os Povos Originários",
     description:
-      "Incorporada ao ordenamento jurídico brasileiro, reconhece os direitos dos povos indígenas e tribais, respeitando suas culturas e tradições, e reforça o princípio da consulta livre, prévia e informada",
+      "Incorporada ao ordenamento jurídico brasileiro, reconhece os direitos dos povos originários e tribais, respeitando suas culturas e tradições, e reforça o princípio da consulta livre, prévia e informada",
   },
   {
     image: ImgFunai,
-    title: "Fundação Nacional dos Povos Indígenas e seu Papel entre os Povos",
+    title: "Fundação Nacional dos Povos Originários e seu Papel entre os Povos",
     description:
-      "A Funai é fundamental na implementação e fiscalização dos direitos indígenas, colaborando na criação do Ministério dos Povos Indígenas. Ela protege territórios, valoriza culturas e defende a autodeterminação dos povos indígenas.",
+      "A Funai é fundamental na implementação e fiscalização dos direitos indígenas, colaborando na criação do Ministério dos Povos Originários. Ela protege territórios, valoriza culturas e defende a autodeterminação dos povos originários.",
   },
   {
     image: ImgLivro,
     title: "O Marco do Reconhecimento Indígena na Constituição de 1988",
     description:
-      "O artigo 231 da Constituição Federal de 1988 é um marco essencial, pois reconhece a organização social, os costumes, as línguas, as crenças e as tradições dos povos indígenas.",
+      "O artigo 231 da Constituição Federal de 1988 é um marco essencial, pois reconhece a organização social, os costumes, as línguas, as crenças e as tradições dos povos originários.",
   },
 ];
 
