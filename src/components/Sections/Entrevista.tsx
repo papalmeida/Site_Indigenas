@@ -1,10 +1,15 @@
 import { Box, Grid, Typography } from "@mui/material";
 import PlayerSVG from "../../assets/img/img_visita/player.svg";
 import ImgFundo from "../../assets/img/img_visita/fundo_verde.png";
+import { motion, useInView } from "framer-motion";
+import { useRef } from "react";
 
 const YOUTUBE_URL = "https://www.youtube.com/watch?v=IAzFBAGbF2Y";
 
 const Entrevista = () => {
+  const sectionRef = useRef<HTMLDivElement | null>(null);
+  const isInView = useInView(sectionRef, { once: false, amount: 0.3 });
+
   return (
     <Grid
       id="entrevista"
@@ -12,6 +17,7 @@ const Entrevista = () => {
       container
       justifyContent="center"
       position="relative"
+      ref={sectionRef}
       sx={{
         alignItems: { xs: "center", md: "flex-start" },
         background: "#daeeb0",
@@ -37,6 +43,10 @@ const Entrevista = () => {
       />
       <Grid container justifyContent="center">
         <Typography
+          component={motion.p}
+          initial={{ opacity: 0, y: -30 }}
+          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: -30 }}
+          transition={{ duration: 0.8 }}
           sx={{
             textAlign: "center",
             fontSize: { xs: "1.4em", sm: "2.3em", md: "3em", lg: "4em" },
@@ -65,6 +75,12 @@ const Entrevista = () => {
             container
             justifyContent="center"
             alignItems="center"
+            component={motion.div}
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={
+              isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.9 }
+            }
+            transition={{ duration: 0.8, delay: 0.15 }}
             sx={{}}
           >
             <Grid
@@ -126,7 +142,17 @@ const Entrevista = () => {
               </Box>
             </Grid>
           </Grid>
-          <Grid xs={12} md={5} lg={5.5} container justifyContent="center">
+          <Grid
+            xs={12}
+            md={5}
+            lg={5.5}
+            container
+            justifyContent="center"
+            component={motion.div}
+            initial={{ opacity: 0, x: 40 }}
+            animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 40 }}
+            transition={{ duration: 0.8, delay: 0.25 }}
+          >
             <Typography
               sx={{
                 fontFamily: "Codec-Pro",

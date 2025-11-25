@@ -1,10 +1,16 @@
 import { Box, Button, Grid, Typography } from "@mui/material";
 import ImgIntroduction from "../../assets/img/img_introducao/img_introduction.jpeg";
 import ImgFundo from "../../assets/img/img_introducao/fundo_branco.png";
+import { useRef } from "react";
+import { motion, useInView } from "framer-motion";
 
 const Introducao = () => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: false, amount: 0.3 });
+
   return (
     <Grid
+      ref={ref}
       container
       component="section"
       id="introducao"
@@ -27,6 +33,7 @@ const Introducao = () => {
           inset: 0,
           width: "100%",
           height: "100%",
+          objectFit: "cover",
           opacity: 0.25,
           zIndex: 1,
           pointerEvents: "none",
@@ -44,6 +51,7 @@ const Introducao = () => {
           textAlign: { xs: "center", md: "left" },
           boxSizing: "border-box",
           overflowX: "hidden",
+          position: "relative",
           zIndex: 2,
         }}
       >
@@ -51,6 +59,10 @@ const Introducao = () => {
           item
           xs={12}
           md={5.5}
+          component={motion.div}
+          initial={{ opacity: 0, x: -50 }}
+          animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
+          transition={{ duration: 0.8 }}
           sx={{
             display: "flex",
             flexDirection: "column",
@@ -120,6 +132,10 @@ const Introducao = () => {
           item
           xs={12}
           md={5.5}
+          component={motion.div}
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.9 }}
+          transition={{ duration: 0.8, delay: isInView ? 0.2 : 0 }}
           sx={{
             display: "flex",
             justifyContent: "center",
@@ -127,7 +143,9 @@ const Introducao = () => {
           }}
         >
           <Box
-            component="img"
+            component={motion.img}
+            whileHover={{ scale: 1.02 }}
+            transition={{ duration: 0.3 }}
             src={ImgIntroduction}
             alt="Aldeia Geru Tucunã"
             sx={{
@@ -141,7 +159,6 @@ const Introducao = () => {
               borderBottomRightRadius: 0,
               boxShadow: 3,
               background: "#eee",
-              transition: "all 0.3s",
             }}
           />
         </Grid>

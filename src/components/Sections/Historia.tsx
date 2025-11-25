@@ -1,10 +1,13 @@
 import { Typography, Grid } from "@mui/material";
 import LinhaDoTempo from "../../assets/img/img_historia/linha_tempo.svg";
 import { useLayoutEffect, useRef, useState } from "react";
+import { motion, useInView } from "framer-motion";
 
 const Historia = () => {
   const titleRef = useRef<HTMLDivElement>(null);
+  const sectionRef = useRef<HTMLDivElement>(null);
   const [leftOffset, setLeftOffset] = useState(0);
+  const isInView = useInView(sectionRef, { once: false, amount: 0.3 });
 
   useLayoutEffect(() => {
     const updatePosition = () => {
@@ -25,6 +28,7 @@ const Historia = () => {
       component="section"
       container
       position="relative"
+      ref={sectionRef}
       sx={{
         width: "100%",
         pb: 4,
@@ -34,6 +38,10 @@ const Historia = () => {
     >
       <Grid
         position="relative"
+        component={motion.div}
+        initial={{ opacity: 0, y: -40 }}
+        animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: -40 }}
+        transition={{ duration: 0.8 }}
         sx={{
           width: "100%",
           backgroundColor: "#daeeb0",
@@ -83,12 +91,25 @@ const Historia = () => {
       <Grid
         container
         justifyContent="center"
+        component={motion.div}
+        initial={{ opacity: 0, scale: 0.9 }}
+        animate={
+          isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.9 }
+        }
+        transition={{ duration: 0.8, delay: 0.2 }}
         sx={{
           width: "100%",
-          overflowX: "auto",
+          overflow: "hidden",
         }}
       >
-        <img src={LinhaDoTempo} alt="" style={{ width: "100%" }} />
+        <motion.img
+          src={LinhaDoTempo}
+          alt="Linha do tempo"
+          initial={{ opacity: 0, y: 40 }}
+          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 40 }}
+          transition={{ duration: 0.8, delay: 0.35 }}
+          style={{ width: "100%" }}
+        />
       </Grid>
     </Grid>
   );

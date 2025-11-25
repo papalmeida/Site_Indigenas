@@ -1,4 +1,10 @@
-import { useState, type SetStateAction } from "react";
+import {
+  useState,
+  useCallback,
+  useEffect,
+  useRef,
+  type SetStateAction,
+} from "react";
 import { Carousel } from "react-bootstrap";
 import { Typography, Button, Grid, IconButton } from "@mui/material";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
@@ -6,7 +12,7 @@ import ImgBrasilia from "../../assets/img/img_marcos/img_brasilia.jpg";
 import ImgConvercao from "../../assets/img/img_marcos/img_convercao.jpg";
 import ImgFunai from "../../assets/img/img_marcos/img_funai.jpg";
 import ImgLivro from "../../assets/img/img_marcos/img_livro.jpg";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, useInView } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 
 const slides = [
@@ -19,7 +25,7 @@ const slides = [
   },
   {
     image: ImgConvercao,
-    title: "Convenção 169  da OIT e os Povos Originários",
+    title: "Convenção 169 da OIT e os Povos Originários",
     description:
       "Incorporada ao ordenamento jurídico brasileiro, reconhece os direitos dos povos originários e tribais, respeitando suas culturas e tradições, e reforça o princípio da consulta livre, prévia e informada",
   },
@@ -37,14 +43,39 @@ const slides = [
   },
 ];
 
+const SLIDE_DURATION = 6500;
+
 const Marcos = () => {
   const [index, setIndex] = useState(0);
+  const containerRef = useRef<HTMLDivElement | null>(null);
+  const isInView = useInView(containerRef, { amount: 0.4, once: false });
 
   const handleSelect = (selectedIndex: SetStateAction<number>) =>
     setIndex(selectedIndex);
-  const nextSlide = () => setIndex((prev) => (prev + 1) % slides.length);
+  const nextSlide = useCallback(
+    () => setIndex((prev) => (prev + 1) % slides.length),
+    []
+  );
 
   const navigate = useNavigate();
+
+  useEffect(() => {
+    let frameId: number;
+    const start = performance.now();
+
+    const animate = (now: number) => {
+      const elapsed = now - start;
+      const pct = Math.min((elapsed / SLIDE_DURATION) * 100, 100);
+      if (pct >= 100) {
+        nextSlide();
+      } else {
+        frameId = requestAnimationFrame(animate);
+      }
+    };
+
+    frameId = requestAnimationFrame(animate);
+    return () => cancelAnimationFrame(frameId);
+  }, [index, isInView, nextSlide]);
 
   return (
     <Grid
@@ -52,6 +83,7 @@ const Marcos = () => {
       component="section"
       position="relative"
       id="marcos"
+      ref={containerRef}
       sx={{
         overflow: "hidden",
       }}
@@ -61,18 +93,35 @@ const Marcos = () => {
         onSelect={handleSelect}
         controls={false}
         indicators={false}
-        interval={6000}
+        interval={null}
         fade
         style={{ height: "100%" }}
       >
         {slides.map((slide, idx) => (
           <Carousel.Item key={idx}>
-            <img className="hero-img" src={slide.image} alt={`slide-${idx}`} />
+            <motion.img
+              initial={{ scale: 1.1 }}
+              animate={{ scale: 1 }}
+              transition={{ duration: 6 }}
+              src={slide.image}
+              alt={`slide-${idx}`}
+              style={{
+                width: "100vw",
+                height: "100vh",
+                objectFit: "cover",
+                filter: "brightness(0.7)",
+              }}
+            />
           </Carousel.Item>
         ))}
       </Carousel>
 
-      <div className="hero-overlay" />
+      <motion.div
+        className="hero-overlay"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.8 }}
+      />
 
       <Grid
         container
@@ -127,9 +176,9 @@ const Marcos = () => {
             <AnimatePresence mode="wait">
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -20 }}
+                initial={{ opacity: 0, x: -50 }}
+                animate={{ opacity: 1, x: 0 }}
+                exit={{ opacity: 0, x: 50 }}
                 transition={{ duration: 0.6 }}
               >
                 <Typography
@@ -187,7 +236,7 @@ const Marcos = () => {
                   letterSpacing: 3,
                   fontFamily: "Montserrat",
                   fontSize: { xs: "0.9em", sm: "1em" },
-                  background: "rgba(255, 255, 255, 0.35)",
+                  background: "rgba(255, 255, 255, 0.15)",
                   backdropFilter: "blur(3px)",
                   textTransform: "uppercase",
                   "&:hover": {
