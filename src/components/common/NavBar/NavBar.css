@@ -65,6 +65,12 @@
 
 @media (min-width: 1000px) {
   .custom-navbar .nav-link {
+    font-size: 0.9em;
+  }
+}
+
+@media (min-width: 1500px) {
+  .custom-navbar .nav-link {
     font-size: 1em;
   }
 }

@@ -45,7 +45,7 @@ const Apoie = () => {
           position: "absolute",
           left: 0,
           bottom: 0,
-          width: { xs: 180, md: 220 },
+          width: { xs: 180, md: 220, lg: 300 },
           zIndex: 2,
           pointerEvents: "none",
           userSelect: "none",
@@ -76,14 +76,14 @@ const Apoie = () => {
           animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 40 }}
           transition={{ duration: 0.8, delay: 0.1 }}
           sx={{
-            maxWidth: "1200px",
+            maxWidth: "1300px",
           }}
         >
           <Typography
             sx={{
               textAlign: { xs: "center", lg: "right" },
               fontFamily: "The-Seasons",
-              fontSize: { xs: "2em", sm: "2.5em", md: "3em", lg: "4em" },
+              fontSize: { xs: "2em", sm: "2.5em", md: "3em", xl: "3.5em" },
               fontWeight: 500,
               color: "#daeeb0",
               mb: 3,
@@ -98,7 +98,7 @@ const Apoie = () => {
           <Typography
             sx={{
               fontFamily: "Codec-Pro",
-              fontSize: { xs: "1em", sm: "1.1em", md: "1.3em" },
+              fontSize: { xs: "1em", sm: "1.1em", md: "1.3em", xl: "1.5em" },
               px: { xs: "10px", sm: "", md: "" },
               color: "#f5f7e7",
               mb: 3,
@@ -147,7 +147,7 @@ const Apoie = () => {
             px: { xs: 2, md: 4 },
             py: 1,
             mb: { sm: "20px" },
-            fontSize: { xs: "0.7em", sm: "1em", md: "1.2em" },
+            fontSize: { xs: "0.7em", sm: "1em", md: "1.2em", xl: "1.3em" },
             fontFamily: "Centaur",
             fontWeight: 500,
             textAlign: "center",
