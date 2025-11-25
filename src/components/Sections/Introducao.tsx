@@ -20,8 +20,10 @@ const Introducao = () => {
         backgroundColor: "#fff",
         width: "100%",
         minHeight: "100vh",
+        py: { xs: 6, md: 0 },
         position: "relative",
         overflow: "hidden",
+        alignContent: "center",
       }}
     >
       <Box
@@ -53,6 +55,8 @@ const Introducao = () => {
           overflowX: "hidden",
           position: "relative",
           zIndex: 2,
+          minHeight: { md: "80vh" },
+          justifyContent: "space-between",
         }}
       >
         <Grid
@@ -66,13 +70,13 @@ const Introducao = () => {
           sx={{
             display: "flex",
             flexDirection: "column",
-            alignItems: { sm: "center", md: "flex-start" },
+            alignItems: { xs: "center", lg: "flex-start" },
           }}
         >
           <Typography
             sx={{
               fontFamily: "The-Seasons",
-              fontSize: { xs: "2em", sm: "2.5em", md: "3em" },
+              fontSize: { xs: "2em", sm: "2.3em", md: "2.7em" },
               fontWeight: "bold",
               marginBottom: "20px",
               color: "#71a637",
@@ -84,7 +88,7 @@ const Introducao = () => {
           <Typography
             sx={{
               fontFamily: "Codec-Pro",
-              fontSize: { xs: "1em", sm: "1.2em", md: "1.3em" },
+              fontSize: { xs: "1em", sm: "1.1em", md: "1.2em" },
               lineHeight: "1.4",
               color: "#333",
               maxWidth: "500px",
@@ -151,7 +155,7 @@ const Introducao = () => {
             sx={{
               width: { xs: "90vw", sm: "70vw", md: "100%" },
               maxWidth: { xs: "350px", sm: "450px", md: "600px" },
-              height: { xs: "350px", sm: "450px", md: "600px" },
+              height: { xs: "350px", sm: "450px", md: "550px", xl: "650px" },
               objectFit: "cover",
               borderTopLeftRadius: { xs: "175px", sm: "225px", md: "300px" },
               borderTopRightRadius: { xs: "175px", sm: "225px", md: "300px" },
