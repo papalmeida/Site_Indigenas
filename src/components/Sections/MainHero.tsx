@@ -29,7 +29,14 @@ const Hero = () => (
     >
       {images.map((src, idx) => (
         <Carousel.Item key={idx}>
-          <img className="hero-img" src={src} alt={`slide-${idx}`} />
+          <img
+            className="hero-img"
+            src={src}
+            alt={`slide-${idx}`}
+            loading={idx === 0 ? "eager" : "lazy"}
+            fetchPriority={idx === 0 ? "high" : "auto"}
+            decoding="async"
+          />
         </Carousel.Item>
       ))}
     </Carousel>
