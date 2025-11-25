@@ -7,6 +7,7 @@ import { AnimatePresence, motion } from "framer-motion";
 const NavBar = () => {
   const [expanded, setExpanded] = useState(false);
   const [isVisible, setIsVisible] = useState(true);
+  const [activeSection, setActiveSection] = useState("");
   const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   const getIsMobile = useCallback(
@@ -58,6 +59,67 @@ const NavBar = () => {
     }
   }, [isMobile, showNavbar]);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const sections = navItems
+        .map((item) => {
+          const id = item.href.substring(1);
+          const element = document.getElementById(id);
+          if (element) {
+            const rect = element.getBoundingClientRect();
+            return {
+              id: item.href,
+              top: rect.top,
+              bottom: rect.bottom,
+            };
+          }
+          return null;
+        })
+        .filter(Boolean);
+
+      // Verificar se está no MainHero (topo da página)
+      const firstSection = document.getElementById(
+        navItems[0].href.substring(1)
+      );
+      if (firstSection) {
+        const firstSectionTop = firstSection.getBoundingClientRect().top;
+        // Se a primeira seção ainda não chegou ao meio da tela, não ativar nada
+        if (firstSectionTop > window.innerHeight / 2) {
+          setActiveSection("");
+          return;
+        }
+      }
+
+      // Encontrar a seção que está mais visível no viewport
+      const viewportMiddle = window.innerHeight / 2;
+      let closestSection = sections[0];
+      let closestDistance = Math.abs(sections[0]?.top || 0);
+
+      sections.forEach((section) => {
+        if (section) {
+          const distance = Math.abs(section.top - viewportMiddle);
+          if (section.top <= viewportMiddle && section.bottom >= 0) {
+            if (distance < closestDistance || section.top > 0) {
+              closestSection = section;
+              closestDistance = distance;
+            }
+          }
+        }
+      });
+
+      if (closestSection) {
+        setActiveSection(closestSection.id);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    handleScroll(); // Verificar na montagem
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [navItems]);
+
   return (
     <AnimatePresence>
       <motion.div
@@ -84,7 +146,10 @@ const NavBar = () => {
             className="m-2"
           />
           <Navbar.Collapse id="responsive-navbar-nav">
-            <Nav className="me-auto mx-auto nav-underline">
+            <Nav
+              className="me-auto mx-auto nav-underline"
+              activeKey={activeSection}
+            >
               {navItems.map((item, index) => (
                 <motion.div
                   key={item.href}
@@ -102,8 +167,17 @@ const NavBar = () => {
                 >
                   <Nav.Link
                     className="mx-auto"
+                    eventKey={item.href}
                     href={item.href}
-                    onClick={() => {
+                    onClick={(e) => {
+                      e.preventDefault();
+                      const id = item.href.substring(1);
+                      const element = document.getElementById(id);
+                      if (element) {
+                        element.scrollIntoView({ behavior: "smooth" });
+                      }
+                      // Atualiza imediatamente o ativo para evitar estado antigo
+                      setActiveSection(item.href);
                       if (isMobile) {
                         setExpanded(false);
                       }
