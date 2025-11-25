@@ -88,7 +88,6 @@
 }
 
 .custom-navbar .nav-link:hover::after,
-.custom-navbar .nav-link:focus-visible::after,
 .custom-navbar .nav-link.active::after {
   width: 60%;
   left: 20%;

@@ -146,7 +146,10 @@ const NavBar = () => {
             className="m-2"
           />
           <Navbar.Collapse id="responsive-navbar-nav">
-            <Nav className="me-auto mx-auto nav-underline">
+            <Nav
+              className="me-auto mx-auto nav-underline"
+              activeKey={activeSection}
+            >
               {navItems.map((item, index) => (
                 <motion.div
                   key={item.href}
@@ -163,11 +166,18 @@ const NavBar = () => {
                   }
                 >
                   <Nav.Link
-                    className={`mx-auto ${
-                      activeSection === item.href ? "active" : ""
-                    }`}
+                    className="mx-auto"
+                    eventKey={item.href}
                     href={item.href}
-                    onClick={() => {
+                    onClick={(e) => {
+                      e.preventDefault();
+                      const id = item.href.substring(1);
+                      const element = document.getElementById(id);
+                      if (element) {
+                        element.scrollIntoView({ behavior: "smooth" });
+                      }
+                      // Atualiza imediatamente o ativo para evitar estado antigo
+                      setActiveSection(item.href);
                       if (isMobile) {
                         setExpanded(false);
                       }
