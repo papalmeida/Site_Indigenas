@@ -9,16 +9,13 @@
     background-color: transparent;
     backdrop-filter: none;
     border-bottom: none;
+    transition: background-color 0.2s ease;
+    will-change: background-color;
   }
 
   .custom-navbar:has(.navbar-collapse.show) {
     background-color: rgba(0, 0, 0, 0.3);
     backdrop-filter: blur(6px);
-  }
-
-  /* O menu colapsado já fica escuro */
-  .custom-navbar .navbar-collapse.show {
-    padding: 1rem 0;
   }
 
   /* Botão do toggle */

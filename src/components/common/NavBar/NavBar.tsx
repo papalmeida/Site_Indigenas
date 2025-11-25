@@ -1,18 +1,19 @@
 import { Nav } from "react-bootstrap";
 import Navbar from "react-bootstrap/Navbar";
 import "./NavBar.css";
-import { useEffect, useState, useCallback } from "react";
+import { useState, useCallback, useEffect, useRef } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 
 const NavBar = () => {
-  const [isVisible, setIsVisible] = useState(true);
-  const [lastScrollY, setLastScrollY] = useState(0);
   const [expanded, setExpanded] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
+  const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+
   const getIsMobile = useCallback(
     () => (typeof window !== "undefined" ? window.innerWidth < 992 : false),
     []
   );
-  const [isMobile, setIsMobile] = useState(getIsMobile);
+  const [isMobile] = useState(getIsMobile);
   const navItems = [
     { href: "#introducao", label: "Introdução" },
     { href: "#marcos", label: "Marcos" },
@@ -22,141 +23,100 @@ const NavBar = () => {
     { href: "#colaboradores", label: "Colaboradores" },
   ];
 
-  useEffect(() => {
-    let timeout: number;
-
-    const handleScroll = () => {
-      const currentScrollY = window.scrollY;
-
-      // Se o scroll mudou, mostra a navbar
-      if (currentScrollY !== lastScrollY) {
-        setIsVisible(true);
-        setLastScrollY(currentScrollY);
-
-        // Remove o timeout anterior se existir
-        clearTimeout(timeout);
-
-        // Esconde após 3 segundos de inatividade (apenas em telas grandes)
-        if (!getIsMobile()) {
-          timeout = setTimeout(() => {
-            setIsVisible(false);
-          }, 2500);
-        }
+  const showNavbar = useCallback(() => {
+    if (!isMobile) {
+      setIsVisible(true);
+      if (timeoutRef.current) {
+        clearTimeout(timeoutRef.current);
       }
-    };
-
-    const handleMouseMove = (e: MouseEvent) => {
-      // Se o mouse estiver próximo do topo da tela (primeiros 100px)
-      if (e.clientY <= 100) {
-        setIsVisible(true);
-        clearTimeout(timeout);
-
-        // Esconde após 3 segundos se não houver movimento (apenas em telas grandes)
-        if (!getIsMobile()) {
-          timeout = setTimeout(() => {
-            setIsVisible(false);
-          }, 2500);
-        }
-      }
-    };
-
-    const handleResize = () => {
-      // Em telas pequenas, sempre mostra a navbar
-      const mobile = getIsMobile();
-      setIsMobile(mobile);
-      if (mobile) {
-        setIsVisible(true);
-        clearTimeout(timeout);
-        setExpanded(false);
-      } else {
-        // Em telas grandes, inicia o timer
-        timeout = setTimeout(() => {
-          setIsVisible(false);
-        }, 2500);
-      }
-    };
-
-    // Inicializa o timer ao carregar
-    if (!getIsMobile()) {
-      timeout = setTimeout(() => {
+      timeoutRef.current = setTimeout(() => {
         setIsVisible(false);
-      }, 2500);
+      }, 3000);
     }
+  }, [isMobile]);
 
-    window.addEventListener("scroll", handleScroll);
-    window.addEventListener("mousemove", handleMouseMove);
-    window.addEventListener("resize", handleResize);
+  useEffect(() => {
+    if (!isMobile) {
+      const handleScroll = () => showNavbar();
+      const handleMouseMove = () => showNavbar();
 
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-      window.removeEventListener("mousemove", handleMouseMove);
-      window.removeEventListener("resize", handleResize);
-      clearTimeout(timeout);
-    };
-  }, [getIsMobile, lastScrollY]);
+      window.addEventListener("scroll", handleScroll);
+      window.addEventListener("mousemove", handleMouseMove);
+
+      // Iniciar o timer quando o componente montar
+      showNavbar();
+
+      return () => {
+        window.removeEventListener("scroll", handleScroll);
+        window.removeEventListener("mousemove", handleMouseMove);
+        if (timeoutRef.current) {
+          clearTimeout(timeoutRef.current);
+        }
+      };
+    } else {
+      setIsVisible(true);
+    }
+  }, [isMobile, showNavbar]);
 
   return (
     <AnimatePresence>
-      {(isVisible || isMobile) && (
-        <motion.div
-          initial={{ y: -100, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          exit={{ y: -100, opacity: 0 }}
-          transition={{ duration: 0.8, ease: "easeInOut" }}
-          style={{ position: "fixed", top: 0, left: 0, right: 0, zIndex: 1030 }}
+      <motion.div
+        initial={{ y: -100, opacity: 0 }}
+        animate={{
+          y: isVisible || isMobile ? 0 : -100,
+          opacity: isVisible || isMobile ? 1 : 0,
+        }}
+        exit={{ y: -100, opacity: 0 }}
+        transition={{ duration: 0.3, ease: "easeInOut" }}
+        style={{ position: "fixed", top: 0, left: 0, right: 0, zIndex: 1030 }}
+        onMouseEnter={() => !isMobile && showNavbar()}
+      >
+        <Navbar
+          collapseOnSelect
+          expand="lg"
+          data-bs-theme="dark"
+          className="custom-navbar"
+          expanded={expanded}
+          onToggle={(value) => setExpanded(Boolean(value))}
         >
-          <Navbar
-            collapseOnSelect
-            expand="lg"
-            data-bs-theme="dark"
-            className="custom-navbar"
-            expanded={expanded}
-            onToggle={(value) => setExpanded(Boolean(value))}
-          >
-            <Navbar.Toggle
-              aria-controls="responsive-navbar-nav"
-              className="m-2"
-            />
-            <AnimatePresence initial={false}>
-              {(!isMobile || expanded) && (
+          <Navbar.Toggle
+            aria-controls="responsive-navbar-nav"
+            className="m-2"
+          />
+          <Navbar.Collapse id="responsive-navbar-nav">
+            <Nav className="me-auto mx-auto nav-underline">
+              {navItems.map((item, index) => (
                 <motion.div
-                  key="nav-links"
-                  initial={
+                  key={item.href}
+                  initial={isMobile ? { opacity: 0, y: -10 } : false}
+                  animate={isMobile ? { opacity: 1, y: 0 } : {}}
+                  transition={
                     isMobile
-                      ? { opacity: 0, y: -20, height: 0 }
-                      : { opacity: 1, y: 0 }
+                      ? {
+                          duration: 0.25,
+                          delay: index * 0.04,
+                          ease: [0.4, 0, 0.2, 1],
+                        }
+                      : {}
                   }
-                  animate={{ opacity: 1, y: 0, height: "auto" }}
-                  exit={isMobile ? { opacity: 0, y: -20, height: 0 } : {}}
-                  transition={{ duration: 0.35, ease: "easeOut" }}
-                  style={{
-                    width: "100%",
-                  }}
                 >
-                  <Navbar.Collapse id="responsive-navbar-nav">
-                    <Nav className="me-auto mx-auto nav-underline">
-                      {navItems.map((item) => (
-                        <Nav.Link
-                          key={item.href}
-                          className="mx-auto"
-                          href={item.href}
-                          onClick={() => {
-                            if (isMobile) {
-                              setExpanded(false);
-                            }
-                          }}
-                        >
-                          {item.label}
-                        </Nav.Link>
-                      ))}
-                    </Nav>
-                  </Navbar.Collapse>
+                  <Nav.Link
+                    className="mx-auto"
+                    href={item.href}
+                    onClick={() => {
+                      if (isMobile) {
+                        setExpanded(false);
+                      }
+                    }}
+                  >
+                    {item.label}
+                  </Nav.Link>
                 </motion.div>
-              )}
-            </AnimatePresence>
-          </Navbar>
-        </motion.div>
-      )}
+              ))}
+            </Nav>
+          </Navbar.Collapse>
+        </Navbar>
+      </motion.div>
     </AnimatePresence>
   );
 };
