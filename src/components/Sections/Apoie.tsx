@@ -1,8 +1,13 @@
 import { Box, Typography, Button, Grid } from "@mui/material";
 import ImgFundo from "../../assets/img/img_apoie/fundo_arroz.webp";
 import ImgMao from "../../assets/img/img_apoie/mao.png";
+import { motion, useInView } from "framer-motion";
+import { useRef } from "react";
 
 const Apoie = () => {
+  const sectionRef = useRef<HTMLDivElement | null>(null);
+  const isInView = useInView(sectionRef, { once: false, amount: 0.35 });
+
   return (
     <Grid
       id="apoie"
@@ -13,6 +18,7 @@ const Apoie = () => {
       alignItems="end"
       position="relative"
       paddingX={"20px"}
+      ref={sectionRef}
       sx={{
         minHeight: "100vh",
         width: "100%",
@@ -50,17 +56,25 @@ const Apoie = () => {
       <Grid
         container
         position="relative"
-        alignItems={{ xs: "center", lg: "flex-end"}}
+        alignItems={{ xs: "center", lg: "flex-end" }}
         flexDirection="column"
+        component={motion.div}
+        initial={{ opacity: 0, y: 40 }}
+        animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 40 }}
+        transition={{ duration: 0.8 }}
         sx={{
           zIndex: 2,
           paddingY: "20px",
-          maxWidth: "1200px"
+          maxWidth: "1200px",
         }}
       >
         <Grid
           container
           justifyContent={{ xs: "center", lg: "flex-end" }}
+          component={motion.div}
+          initial={{ opacity: 0, x: 40 }}
+          animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 40 }}
+          transition={{ duration: 0.8, delay: 0.1 }}
           sx={{
             maxWidth: "1200px",
           }}
@@ -83,14 +97,12 @@ const Apoie = () => {
           </Typography>
           <Typography
             sx={{
-              
               fontFamily: "Codec-Pro",
               fontSize: { xs: "1em", sm: "1.1em", md: "1.3em" },
               px: { xs: "10px", sm: "", md: "" },
               color: "#f5f7e7",
               mb: 3,
               textAlign: { xs: "justify", lg: "right" },
-              
             }}
           >
             Nós, estudantes de Direito, tivemos o privilégio de conhecer a fundo

@@ -1,7 +1,6 @@
 .custom-navbar {
   background-color: rgba(0, 0, 0, 0.3);
   backdrop-filter: blur(6px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 /* Em telas pequenas, com menu fechado — esconder o fundo geral */
@@ -15,7 +14,6 @@
   .custom-navbar:has(.navbar-collapse.show) {
     background-color: rgba(0, 0, 0, 0.3);
     backdrop-filter: blur(6px);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   }
 
   /* O menu colapsado já fica escuro */
@@ -28,6 +26,20 @@
     background-color: rgba(0, 0, 0, 0.3);
     backdrop-filter: blur(6px);
     border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .custom-navbar .navbar-toggler:focus,
+  .custom-navbar .navbar-toggler:active,
+  .custom-navbar .navbar-toggler:focus-visible {
+    box-shadow: none;
+    border-color: rgba(255, 255, 255, 0.8);
+    border-width: 2px;
+    outline: none;
+  }
+
+  .custom-navbar .navbar-toggler.collapsed {
+    border-color: rgba(255, 255, 255, 0.2);
+    border-width: 1px;
   }
 }
 
@@ -42,6 +54,13 @@
   padding-right: 2rem;
   min-width: 140px;
   box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+  border-bottom: none !important;
+}
+
+.custom-navbar .nav-underline .nav-link {
+  border-bottom: none !important;
 }
 
 @media (min-width: 1000px) {
@@ -52,4 +71,22 @@
 
 .custom-navbar .nav-link:hover {
   color: #f1f4e1 !important;
+}
+
+.custom-navbar .nav-link::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0.35rem;
+  width: 0;
+  height: 2px;
+  background-color: #edf5df;
+  transition: width 0.25s ease, left 0.25s ease;
+}
+
+.custom-navbar .nav-link:hover::after,
+.custom-navbar .nav-link:focus-visible::after,
+.custom-navbar .nav-link.active::after {
+  width: 60%;
+  left: 20%;
 }

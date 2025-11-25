@@ -1,6 +1,7 @@
 import { Carousel } from "react-bootstrap";
 import "../../styles/MainHero.css";
 import { Box, Grid, Typography } from "@mui/material";
+import { motion } from "framer-motion";
 import img1 from "../../assets/img/img_hero/img1.jpg";
 import img2 from "../../assets/img/img_hero/img2.jpg";
 import img3 from "../../assets/img/img_hero/img3.jpg";
@@ -15,7 +16,7 @@ const Hero = () => (
     position="relative"
     sx={{
       width: "100vw",
-      height: { md:"100vh"},
+      height: { md: "100vh" },
       overflow: "hidden",
     }}
   >
@@ -38,6 +39,10 @@ const Hero = () => (
       flexDirection="column"
       justifyContent="space-between"
       position="absolute"
+      component={motion.div}
+      initial={{ opacity: 0, y: 40 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.9, ease: "easeOut" }}
       sx={{
         top: 0,
         left: 0,
@@ -54,6 +59,10 @@ const Hero = () => (
         container
         justifyContent="space-between"
         alignContent="center"
+        component={motion.div}
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, delay: 0.2 }}
         sx={{
           marginTop: "40px",
           mb: 2,
@@ -89,12 +98,17 @@ const Hero = () => (
         alignItems="center"
         justifyContent="end"
         sx={{
-          flex: {sm: 1},
+          flex: { sm: 1 },
           marginBottom: "30px",
         }}
       >
         <Grid position="relative" justifyContent="center">
           <Typography
+            component={motion.p}
+            initial={{ opacity: 0, y: -20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.6 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
             position="relative"
             sx={{
               textAlign: { xs: "center", sm: "left" },
@@ -112,6 +126,10 @@ const Hero = () => (
             aldeia geru tucunã pataxó
           </Typography>
           <Typography
+            component={motion.p}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.9, delay: 0.4 }}
             textAlign="center"
             sx={{
               fontFamily: "The-Seasons",
@@ -128,6 +146,10 @@ const Hero = () => (
           </Typography>
         </Grid>
         <Typography
+          component={motion.p}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.9, delay: 0.6 }}
           textAlign="center"
           sx={{
             fontFamily: "Montserrat",
@@ -146,6 +168,10 @@ const Hero = () => (
       <Grid
         container
         alignItems="center"
+        component={motion.div}
+        initial={{ opacity: 0, scaleX: 0 }}
+        animate={{ opacity: 1, scaleX: 1 }}
+        transition={{ duration: 1, delay: 0.8, ease: "easeOut" }}
         sx={{
           mt: { xs: 3, md: 4 },
         }}
