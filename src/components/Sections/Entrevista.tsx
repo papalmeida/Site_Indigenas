@@ -89,15 +89,21 @@ const Entrevista = () => {
               justifyContent="center"
               alignItems="center"
               sx={{
-                width: { xs: 380, sm: 500, md: 500, lg: 600 },
-                height: { xs: 200, sm: 280, md: 280, lg: 330 },
+                width: { xs: 380, sm: 500, lg: 600 },
+                height: { xs: 200, sm: 280, lg: 320 },
+                border: "2px solid #3f3f3fff",
                 borderRadius: "16px",
-                boxShadow: 2,
+                boxShadow: 10,
                 overflow: "hidden",
-                background: "#000",
+                cursor: "pointer",
+                "&:hover img": {
+                  filter: "brightness(0.8)",
+                },
               }}
+              onClick={() => window.open(YOUTUBE_URL, "_blank")}
             >
               <img
+                className="video-thumbnail"
                 src={`https://img.youtube.com/vi/IAzFBAGbF2Y/hqdefault.jpg`}
                 alt="Capa do vídeo"
                 style={{
@@ -105,8 +111,7 @@ const Entrevista = () => {
                   height: "100%",
                   objectFit: "cover",
                   display: "block",
-                  borderRadius: "16px",
-                  filter: "brightness(0.85)",
+                  transition: "filter 0.4s easeInOut",
                 }}
               />
               <Box
@@ -122,16 +127,7 @@ const Entrevista = () => {
                   justifyContent: "center",
                   zIndex: 2,
                   borderRadius: "50%",
-                  background: "rgba(0,0,0,0.18)",
-                  transition: "background 0.2s, box-shadow 0.2s",
-                  boxShadow: "0 0 0 0 rgba(113,166,55,0)",
-                  cursor: "pointer",
-                  "&:hover": {
-                    background: "rgba(255,255,255,0.18)",
-                    boxShadow: "0 0 0 4px #71a63744",
-                  },
                 }}
-                onClick={() => window.open(YOUTUBE_URL, "_blank")}
               >
                 <img
                   src={PlayerSVG}
